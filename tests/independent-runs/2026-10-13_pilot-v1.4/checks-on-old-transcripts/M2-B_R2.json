@@ -1,0 +1,79 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/transcripts/M2-B_R2.md",
+ "must": [
+  {
+   "check": "questionnaire-missing-parts",
+   "turn": 6,
+   "evidence": "questions"
+  }
+ ],
+ "suspects": [
+  {
+   "check": "possible-second-ask",
+   "turn": 1,
+   "evidence": "Her title alone doesn't tell me which gaps the questions should aim at."
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 2,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 3,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 4,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 4,
+   "evidence": "7 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 5,
+   "evidence": "12 sentences before the question"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 6,
+   "evidence": "10"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 5,
+  "tagged_messages": 0,
+  "final_output_turn_6": "questionnaire",
+  "questions_with_answer_line_turn_6": 10,
+  "markers_turn_6": {
+   "assumption:": 0,
+   "recommended:": 0,
+   "(added by me)": 0,
+   "not included — see note": 0,
+   "not done": 0,
+   "hard to reverse": 0
+  },
+  "assistant_turns": 7,
+  "first_final_output_turn": 6
+ }
+}

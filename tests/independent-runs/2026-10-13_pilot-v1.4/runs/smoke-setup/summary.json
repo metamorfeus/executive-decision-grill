@@ -1,0 +1,11 @@
+{
+ "test_id": "M1-B",
+ "label": "SMOKE",
+ "status": "turn-cap",
+ "assistant_turns": 2,
+ "executive_calls": 2,
+ "cost_usd_assistant": 0.1052,
+ "cost_usd_executive": 0.0217,
+ "cost_usd_total": 0.1268,
+ "transcript": "runs\\smoke\\M1-B_SMOKE.md"
+}

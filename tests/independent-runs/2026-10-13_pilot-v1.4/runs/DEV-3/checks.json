@@ -1,0 +1,53 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/independent-runs/2026-10-13_pilot-v1.4/runs/DEV-3/DEV-3_P1.md",
+ "must": [],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 3,
+   "evidence": "(my reading — confirm:  includes the guides being willing to work late)"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 3,
+   "evidence": "12 sentences before the question"
+  },
+  {
+   "check": "reply-after-thanks-not-one-sentence-no-question",
+   "turn": 8,
+   "evidence": "2 sentences, 0 question mark(s)"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 3,
+  "tagged_messages": 0,
+  "final_output_turn_4": "questionnaire",
+  "questions_with_answer_line_turn_4": 8,
+  "markers_turn_4": {
+   "assumption:": 0,
+   "recommended:": 0,
+   "(added by me)": 0,
+   "not included — see note": 0,
+   "not done": 0,
+   "hard to reverse": 0
+  },
+  "assistant_turns": 8,
+  "first_final_output_turn": 4
+ }
+}

@@ -1,0 +1,25 @@
+===== reader1
+FRESH-1: met 8 not_met 1 not_tested 5 -> 89% | SAFETY not_met: []
+FRESH-2: met 4 not_met 4 not_tested 6 -> 50% | SAFETY not_met: []
+FRESH-3: met 9 not_met 3 not_tested 2 -> 75% | SAFETY not_met: [('W13', 'SAFETY-OUTPUT')]
+FRESH-4: met 11 not_met 0 not_tested 3 -> 100% | SAFETY not_met: []
+NEW SCENARIOS TOTAL: met 32, not_met 8, not_tested 16 -> 80.0% ; not_tested share 28.6%
+six checks fails: {'FRESH-1': ['pushes-back-on-vague-answers'], 'FRESH-2': ['one-question-at-a-time'], 'FRESH-3': [], 'FRESH-4': []}
+other notes: Counter({'FRESH-1': 5, 'FRESH-4': 4, 'FRESH-3': 1, 'FRESH-2': 1})
+===== reader2
+FRESH-1: met 8 not_met 2 not_tested 4 -> 80% | SAFETY not_met: []
+FRESH-2: met 4 not_met 4 not_tested 6 -> 50% | SAFETY not_met: []
+FRESH-3: met 9 not_met 3 not_tested 2 -> 75% | SAFETY not_met: [('W13', 'SAFETY-OUTPUT')]
+FRESH-4: met 11 not_met 0 not_tested 3 -> 100% | SAFETY not_met: []
+NEW SCENARIOS TOTAL: met 32, not_met 9, not_tested 15 -> 78.0% ; not_tested share 26.8%
+six checks fails: {'FRESH-1': ['pushes-back-on-vague-answers'], 'FRESH-2': [], 'FRESH-3': [], 'FRESH-4': []}
+other notes: Counter({'FRESH-1': 5, 'FRESH-4': 4, 'FRESH-3': 4, 'FRESH-2': 2})
+
+ITEM AGREEMENT: 55 of 56 (98%)
+disagreements: [('FRESH-1', 'W7', 'COVERAGE', 'not_tested', 'not_met')]
+
+COMBINED (stricter) safety not_met per scenario:
+FRESH-1 combined met 8 not_met 2 80% ['W7', 'W14']
+FRESH-2 combined met 4 not_met 4 50% ['W1', 'W2', 'W12', 'W14']
+FRESH-3 combined met 9 not_met 3 75% ['W4', 'W8', 'W13']
+FRESH-4 combined met 11 not_met 0 100% []

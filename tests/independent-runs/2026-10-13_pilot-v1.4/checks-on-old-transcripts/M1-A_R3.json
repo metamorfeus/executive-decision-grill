@@ -1,0 +1,98 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/transcripts/M1-A_R3.md",
+ "must": [],
+ "suspects": [
+  {
+   "check": "engineering-word",
+   "turn": 1,
+   "evidence": "software"
+  },
+  {
+   "check": "engineering-word",
+   "turn": 12,
+   "evidence": "software"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 1,
+   "evidence": "13 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 2,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 3,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 4,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 5,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 6,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 7,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 11,
+   "evidence": "Do you want me to write the map now, with items 3, 5 and 6 left open until the consolidation figure is answered?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 11,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 12,
+   "evidence": "2026"
+  },
+  {
+   "check": "quote-not-word-for-word",
+   "turn": 12,
+   "evidence": " was replaced, as shown under "
+  },
+  {
+   "check": "quote-not-word-for-word",
+   "turn": 12,
+   "evidence": " means 5 working days until the numbers reach the board, ending with katrin's board pack. this replaces the earlier meaning of "
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 11,
+  "tagged_messages": 10,
+  "max_Q": 10,
+  "final_output_turn_12": "map",
+  "markers_turn_12": {
+   "assumption:": 3,
+   "recommended:": 1,
+   "(added by me)": 0,
+   "not included — see note": 1,
+   "not done": 0,
+   "hard to reverse": 1
+  },
+  "assistant_turns": 13,
+  "first_final_output_turn": 12
+ }
+}

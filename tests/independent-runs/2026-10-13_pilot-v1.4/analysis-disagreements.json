@@ -1,0 +1,32 @@
+{
+ "dis": [
+  [
+   "DEV-1",
+   "W11",
+   "SAFETY-INVENT",
+   "met",
+   "not_met"
+  ],
+  [
+   "DEV-2",
+   "W9",
+   "COVERAGE",
+   "met",
+   "not_met"
+  ],
+  [
+   "DEV-2",
+   "W13",
+   "SAFETY-OUTPUT",
+   "met",
+   "not_met"
+  ],
+  [
+   "DEV-3",
+   "W7",
+   "COVERAGE",
+   "met",
+   "not_met"
+  ]
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "reader1": {
+  "A": "SEAL-3",
+  "B": "SEAL-4",
+  "C": "SEAL-1",
+  "D": "SEAL-2"
+ },
+ "reader2": {
+  "A": "SEAL-4",
+  "B": "SEAL-1",
+  "C": "SEAL-3",
+  "D": "SEAL-2"
+ }
+}

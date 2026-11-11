@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Decision Grill | Claude Project Instructions</title>
+<meta name="description" content="Free Claude Project instructions for executive decisions: a decision map and questionnaire, with nothing to install. Simulated tests only; live check pending.">
+<link rel="canonical" href="https://metamorfeus.github.io/executive-decision-grill/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Executive Decision Grill">
+<meta property="og:title" content="Executive Decision Grill | Claude Project Instructions">
+<meta property="og:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta property="og:url" content="https://metamorfeus.github.io/executive-decision-grill/">
+<meta property="og:image" content="https://metamorfeus.github.io/executive-decision-grill/docs/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Executive Decision Grill: Claude questions your business decision before you commit. Claude recommends. You decide.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Executive Decision Grill | Claude Project Instructions">
+<meta name="twitter:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta name="twitter:image" content="https://metamorfeus.github.io/executive-decision-grill/docs/social-preview.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238a2b24'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23ffffff'%3E%3F%3C/text%3E%3C/svg%3E">
+<!-- Sources for every claim: README.md, docs/QUICK-START.html, docs/FOR-EXECUTIVES.html, PROJECT-INSTRUCTIONS.md (v1.5), tests/TEST-REPORT.html. -->
+<style>
+:root{
+  --bg:#fbfaf8; --panel:#ffffff; --ink:#1a1a1a; --ink-soft:#4a4a4a; --ink-faint:#6b6b6b;
+  --rule:#e2ded7; --rule-strong:#c9c3b8;
+  --accent:#8a2b24; --accent-soft:#f4eae8; --on-accent:#ffffff;
+  --new:#1f6f4a; --new-soft:#e8f3ed;
+  --code:#f2efe9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+    --rule:#33333b; --rule-strong:#4a4a54;
+    --accent:#e08a80; --accent-soft:#2e2020; --on-accent:#16161a;
+    --new:#7fcda4; --new-soft:#1b2b23;
+    --code:#26262c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+  --rule:#33333b; --rule-strong:#4a4a54;
+  --accent:#e08a80; --accent-soft:#2e2020; --on-accent:#16161a;
+  --new:#7fcda4; --new-soft:#1b2b23;
+  --code:#26262c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.6 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:40px 16px 64px}
+h1,h2,h3,.btn,.sub,table,.foot,.status{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+h1{font-size:2.1rem;line-height:1.15;margin:0 0 .3em;letter-spacing:-.015em}
+h2{font-size:1.15rem;margin:2em 0 .5em;padding-bottom:.25em;border-bottom:2px solid var(--rule-strong)}
+h3{font-size:1rem;margin:.1em 0 .4em}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.tagline{font-size:1.2rem;color:var(--ink-soft);margin:.2em 0 .8em}
+.sub{color:var(--ink-faint);font-size:.9rem}
+.hero{background:var(--panel);border:1px solid var(--rule-strong);border-top:4px solid var(--accent);border-radius:6px;padding:20px 20px 16px;margin:1.4em 0}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);border:0;border-radius:6px;padding:12px 20px;font-size:1rem;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+a:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+[hidden]{display:none!important}
+textarea{width:100%;min-height:9em;font:.8rem/1.45 Consolas,"SF Mono",Menlo,monospace;background:var(--panel);color:var(--ink);border:1px solid var(--rule-strong);border-radius:4px;padding:8px;margin:.5em 0}
+.fallback label{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.9rem;margin-top:.6em}
+.btn.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:10px 18px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:.8em 0 .4em}
+.status{min-height:1.4em;font-size:.92rem;color:var(--new);margin:.4em 0 0}
+.status.warn{color:var(--accent)}
+ol.steps{padding-left:1.3em}
+ol.steps li{margin:.5em 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.grid{grid-template-columns:1fr} h1{font-size:1.7rem}}
+.box{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--new);border-radius:4px;padding:12px 16px}
+.say{font-style:italic;color:var(--ink-soft)}
+.note{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:4px;padding:10px 14px;margin:1.2em 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);border-bottom:2px solid var(--rule-strong)}
+.phrase{display:inline-block;font-size:.85rem;background:var(--code);border-radius:3px;padding:.05em .4em;white-space:nowrap}
+ul.links li{margin:.35em 0}
+.foot{margin-top:2.4em;padding-top:.9em;border-top:1px solid var(--rule);font-size:.8rem;color:var(--ink-faint)}
+@media print{
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .wrap{max-width:none;padding:0}
+  .actions,.status,.fallback{display:none}
+  .hero,.box,table,.note{break-inside:avoid}
+  a{color:#000}
+}
+.author{margin-top:2em;padding-top:1em;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.92rem;overflow-wrap:anywhere}
+.author h2{color:var(--ink);margin-top:0}
+.author a{color:var(--accent)}
+.author ul{padding-left:1.3em}
+.author li{margin:.35em 0}
+@media print{.author{color:#000;font-size:9pt;break-inside:avoid}.author h2,.author a{color:#000}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<h1>Executive Decision Grill</h1>
+<p class="tagline">Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install.</p>
+<p class="sub">Paste once into a Claude Project, then start a chat about your decision. <b>Claude recommends. You decide.</b></p>
+<div class="note"><b>Please read this first.</b> Version 1.5 has been tested only in simulated conversations, not yet in the real Claude app, and it did not pass its final test: it sometimes changed a decision without asking or accepted a vague answer. Read every document Claude writes, and check it against what you said, before you use or send it. <a href="tests/TEST-REPORT.html">How it was tested</a>.</div>
+
+<section class="hero" aria-labelledby="setup">
+<h2 id="setup" style="margin-top:0">Set it up in about five minutes</h2>
+<ol class="steps">
+<li>Open <a href="https://claude.ai">claude.ai</a> or the Claude desktop app. Choose <b>Projects</b>, click <b>+ New Project</b>, and name it <i>Executive Decision Grill</i>.</li>
+<li>Copy the instructions with this button. It copies the whole text, about 23,000 characters.
+<div class="actions">
+<button class="btn" id="copy" type="button">Copy the instructions</button>
+<a class="btn secondary" id="open" href="https://raw.githubusercontent.com/metamorfeus/executive-decision-grill/main/PASTE-INTO-CLAUDE.txt">Open the text instead</a>
+</div>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+<div class="fallback" id="fallback" hidden>
+<label for="fulltext">The full text of the instructions</label>
+<textarea id="fulltext" readonly spellcheck="false"></textarea>
+<button class="btn secondary" id="selectall" type="button">Select all</button>
+</div>
+</li>
+<li>In your Project, choose <b>Set project instructions</b> (on some screens it is called <b>Instructions</b>), paste, and click <b>Save instructions</b>.</li>
+<li>Start a new chat <b>inside the Project</b> and say, for example, <span class="say">"Grill me on whether we should move customer service to an outside provider."</span> If it worked, Claude restates your decision in one sentence and lists the smaller decisions inside it.</li>
+</ol>
+<p class="sub">You need a Claude account. Anthropic's help pages say Projects are available on every plan, including Free (at most five Projects), and that you can set instructions for each Project. We have not tried it on a Free account, so check that the <b>Set project instructions</b> button appears. A computer is easier than a phone for the paste. Something not working? See <a href="docs/FOR-EXECUTIVES.html#help">If something goes wrong</a>.</p>
+</section>
+
+
+<h2>From a business decision to a decision map</h2>
+<p>Claude restates your decision in one sentence and lists the smaller decisions hiding inside it. Then it asks about them one at a time. Every decision question ends with <b>My recommendation:</b> and a reason, so "Agreed" is a complete reply. If your answer is vague, Claude asks again for a name, a number, a date or an example. You end with a decision map. <b>Claude recommends. You decide.</b></p>
+
+<div class="grid">
+<div class="box">
+<h3>1 · Decision Grill</h3>
+<p class="say">"Grill me on whether we should drop our reseller in Central Europe."</p>
+<p><b>You get:</b> a decision map. Decided · What we said no to · Parked with someone else · Open · Not yet clear · Terms we agreed · Assumptions · Next step.</p>
+</div>
+<div class="box">
+<h3>2 · Questionnaire</h3>
+<p class="say">"Write a questionnaire for our head of IT about the warehouse go-live."</p>
+<p><b>You get:</b> a neutral questionnaire ready to paste into an email, with a sharing check for names next to criticism, unannounced plans and personal data.</p>
+</div>
+</div>
+
+<h2>Phrases that help</h2>
+<table>
+<thead><tr><th>Say</th><th>What happens</th></tr></thead>
+<tbody>
+<tr><td><span class="phrase">Agreed</span></td><td>You accept Claude's recommended answer and move on.</td></tr>
+<tr><td><span class="phrase">I don't know</span></td><td>The item is parked with the person who would know, or left open. Claude is built not to make up an answer.</td></tr>
+<tr><td><span class="phrase">wait, what?</span></td><td>Claude re-explains its last point in plain words, then asks again.</td></tr>
+<tr><td><span class="phrase">skip the questions</span></td><td>Claude asks the two most important questions, then writes the output.</td></tr>
+<tr><td><span class="phrase">let's wrap up</span></td><td>Straight to the decision map, with the unfinished items listed.</td></tr>
+</tbody>
+</table>
+<p>Hard-to-undo choices stay yours. If you say "whatever you think" about a multi-year contract, Claude asks you to decide it in your own words.</p>
+
+<h2>Read more</h2>
+<ul class="links">
+<li><a href="docs/QUICK-START.html">Printable quick start</a>, to print or share.</li>
+<li><a href="docs/FOR-EXECUTIVES.html">Guide for executives</a>, with two worked examples, good practice and the limits.</li>
+<li><a href="docs/FOR-EXECUTIVES.html#help">If something goes wrong</a>: the paste, the button, and Claude drifting from the rules.</li>
+<li><a href="tests/TEST-REPORT.html">Test report</a>: every test, what each failure taught us, and what is still open.</li>
+<li><a href="docs/WHAT-WAS-BUILT.html">What was built</a> and <a href="docs/HOW-IT-WAS-BUILT.html">how it was built</a>.</li>
+<li><a href="https://github.com/metamorfeus/executive-decision-grill">The project on GitHub</a>, where you can also <a href="https://github.com/metamorfeus/executive-decision-grill/issues/new/choose">report a problem</a> (this needs a free GitHub account).</li>
+<li>Companion: the <a href="https://github.com/metamorfeus/leadership-thinking-partner">Leadership Thinking Partner</a>, for plan reviews, decision records, incident reviews, briefs and handover notes.</li>
+</ul>
+
+<p class="foot">Executive Decision Grill v1.5 · created by Peter Velinov / <a href="https://github.com/metamorfeus">Metamorfeus</a> · MIT licence · Adapted from methods in <a href="https://github.com/mattpocock/skills">Matt Pocock's skills</a> (MIT licence). Independent; not affiliated with or endorsed by Matt Pocock or Anthropic.</p>
+<section class="author" aria-labelledby="about-author">
+<h2 id="about-author">About the author</h2>
+<p>Executive Decision Grill is made by Peter Velinov / Metamorfeus.</p>
+<ul>
+<li><a href="https://metamorfeus.com/">Metamorfeus</a> — Custom AI automation services for business processes.</li>
+<li><a href="https://metamorfeus.com/shop/">Metamorfeus products</a> — Paid offerings including AI audits, workforce automation and employee AI training.</li>
+<li><a href="https://claudecoworktraining.com/">Claude Cowork Training</a> — Independent, free self-paced training for everyday work, with paid team workshops; using Cowork requires a paid Claude plan.</li>
+<li><a href="https://assistant.metamorfeus.com/">Management Assistant</a> — Turns meeting audio or transcripts into draft minutes for review and keeps tasks, owners and due dates together.</li>
+</ul>
+<p>Some linked products and services are paid. Executive Decision Grill stays free and works without any of them. Independent; not affiliated with or endorsed by Matt Pocock or Anthropic.</p>
+</section>
+</main>
+<script>
+(function () {
+  var FIRST = 'You are my decision partner.';
+  var btn = document.getElementById('copy');
+  var status = document.getElementById('status');
+  var open = document.getElementById('open');
+  var box = document.getElementById('fallback');
+  var area = document.getElementById('fulltext');
+  var cached = null;
+  function say(text, warn) {
+    status.textContent = text;
+    status.className = warn ? 'status warn' : 'status';
+  }
+  function done() {
+    say('Copied ' + cached.length.toLocaleString('en') + ' characters. Now paste them into "Set project instructions" in your Project.', false);
+  }
+  // Fetch the text as soon as the page loads, so the click can copy at once.
+  // Safari only allows a copy inside the click itself, not after a download.
+  var loading = !window.fetch ? Promise.reject(new Error('no fetch')) :
+    fetch('PASTE-INTO-CLAUDE.txt', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) { throw new Error('HTTP ' + r.status); } return r.text(); })
+      .then(function (t) {
+        if (t.indexOf(FIRST) !== 0) { throw new Error('unexpected text'); }
+        cached = t;
+        area.value = t;
+        return t;
+      });
+  loading.catch(function () {});
+  function selectBox() {
+    box.hidden = false;
+    area.focus();
+    area.select();
+    area.setSelectionRange(0, area.value.length);
+  }
+  function oldStyleCopy() {
+    var wasHidden = box.hidden;
+    selectBox();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    if (ok) { box.hidden = wasHidden; }
+    return ok;
+  }
+  function fail(reason) {
+    if (cached) {
+      selectBox();
+      say(reason + ' The whole text is now in the box below and selected. Copy it (on a phone: press and hold inside the box, then Select All and Copy).', true);
+    } else {
+      say(reason + ' Use "Open the text instead", select everything (Ctrl+A, or Cmd+A on a Mac) and copy it.', true);
+    }
+  }
+  btn.addEventListener('click', function () {
+    if (cached && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(cached).then(done, function () {
+        if (oldStyleCopy()) { done(); } else { fail('The copy did not work here.'); }
+      });
+      return;
+    }
+    if (!cached && navigator.clipboard && navigator.clipboard.write && window.ClipboardItem && window.fetch) {
+      var blob = loading.then(function (t) { return new Blob([t], { type: 'text/plain' }); });
+      navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })])
+        .then(function () { return loading; })
+        .then(done)
+        .catch(function () { fail('The copy did not work here.'); });
+      return;
+    }
+    if (cached && oldStyleCopy()) { done(); return; }
+    fail('Your browser cannot copy from here.');
+  });
+  document.getElementById('selectall').addEventListener('click', selectBox);
+  if (location.protocol === 'file:') { open.href = 'PASTE-INTO-CLAUDE.txt'; }
+}());
+</script>
+</body>
+</html>

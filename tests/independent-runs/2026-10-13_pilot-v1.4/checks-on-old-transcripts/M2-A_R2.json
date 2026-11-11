@@ -1,0 +1,69 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/transcripts/M2-A_R2.md",
+ "must": [
+  {
+   "check": "questionnaire-missing-parts",
+   "turn": 6,
+   "evidence": "questions"
+  }
+ ],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 3,
+   "evidence": "8 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 4,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 4,
+   "evidence": "11 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 5,
+   "evidence": "14 sentences before the question"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 6,
+   "evidence": "40"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 5,
+  "tagged_messages": 0,
+  "final_output_turn_6": "questionnaire",
+  "questions_with_answer_line_turn_6": 9,
+  "markers_turn_6": {
+   "assumption:": 1,
+   "recommended:": 0,
+   "(added by me)": 0,
+   "not included — see note": 2,
+   "not done": 0,
+   "hard to reverse": 0
+  },
+  "assistant_turns": 8,
+  "first_final_output_turn": 6
+ }
+}

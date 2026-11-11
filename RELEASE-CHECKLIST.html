@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Decision Grill | Pre-publication Checklist</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Executive Decision Grill">
+<meta property="og:title" content="Executive Decision Grill | Pre-publication Checklist">
+<meta property="og:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta property="og:url" content="https://metamorfeus.github.io/executive-decision-grill/RELEASE-CHECKLIST.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Executive Decision Grill | Pre-publication Checklist">
+<meta name="twitter:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta name="description" content="Pre-publication checks for the free Claude Project instructions: open risks and approval steps. Prepared, not published; live check pending.">
+<style>
+:root{
+  --bg:#fbfaf8; --panel:#ffffff; --ink:#1a1a1a; --ink-soft:#4a4a4a; --ink-faint:#6b6b6b;
+  --rule:#e2ded7; --rule-strong:#c9c3b8;
+  --accent:#8a2b24; --accent-soft:#f4eae8;
+  --new:#1f6f4a; --new-soft:#e8f3ed;
+  --code:#f2efe9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+    --rule:#33333b; --rule-strong:#4a4a54;
+    --accent:#e08a80; --accent-soft:#2e2020;
+    --new:#7fcda4; --new-soft:#1b2b23;
+    --code:#26262c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+  --rule:#33333b; --rule-strong:#4a4a54;
+  --accent:#e08a80; --accent-soft:#2e2020;
+  --new:#7fcda4; --new-soft:#1b2b23;
+  --code:#26262c;
+}
+*{box-sizing:border-box}
+a{color:var(--accent)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:36px 16px 56px}
+h1,h2,h3{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.22;letter-spacing:-.01em}
+h1{font-size:1.75rem;margin:0 0 .15em}
+h2{font-size:1.08rem;margin:1.7em 0 .5em;padding-bottom:.25em;border-bottom:2px solid var(--rule-strong)}
+p{margin:.5em 0}
+.sub{color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.88rem;margin:0 0 1.2em}
+.lead{background:var(--panel);border:1px solid var(--rule-strong);border-top:4px solid var(--accent);border-radius:4px;padding:12px 16px}
+code,pre{font-family:Consolas,"SF Mono",Menlo,monospace;font-size:.84em;background:var(--code);border-radius:3px}
+code{padding:.05em .3em}
+pre{padding:10px 12px;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+table{border-collapse:collapse;width:100%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.84rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);border-bottom:2px solid var(--rule-strong)}
+.scroll{overflow-x:auto}
+.ok,.open,.todo{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.04em;border-radius:3px;padding:.1em .45em;white-space:nowrap}
+.ok{background:var(--new-soft);color:var(--new)}
+.open{background:var(--accent-soft);color:var(--accent)}
+.todo{background:var(--code);color:var(--ink-soft)}
+.foot{margin-top:1.8em;padding-top:.8em;border-top:1px solid var(--rule);font-size:.78rem;color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.home{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;margin:0 0 1em}
+@media print{
+  .home{display:none}
+  body{background:#fff;color:#000;font-size:10pt}
+  .wrap{max-width:none;padding:0}
+  table,pre,.lead{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+<p class="home"><a href="index.html">← Executive Decision Grill home page, with the copy button</a></p>
+
+<h1>Executive Decision Grill — release checklist</h1>
+<p class="sub">Prepared 9 November 2026 · reviewed 10 November 2026 · risks resolved 11 November 2026 · instructions v1.5 · repository <code>metamorfeus/executive-decision-grill</code> · status: <span class="open">PREPARED, NOT PUBLISHED</span></p>
+<p>Checks and owner approvals needed before publishing the free Claude Project instructions for decision interviews, decision maps and questionnaires.</p>
+<p><b>Publication decision, 10–11 November 2026.</b> Peter first chose to publish only after the live check in the Claude app, then chose to publish before it (risk R1, still pending). On 11 November the final held-back test was run and did not pass (risk R2); Peter chose to publish version 1.5 with that result stated openly, and accepted the remaining risks (section 3).</p>
+
+<div class="lead">
+<p><b>Where this stands.</b> The product has been renamed from Decision Grill to Executive Decision Grill and prepared for a public GitHub repository with a home page. Nothing has been sent to GitHub. The owner's acceptance of the remaining risks is recorded in section 3; each step in section 4 still needs his yes.</p>
+<p>The text you paste into Claude did not change. It is byte for byte the tested v1.5.</p>
+<p>A pre-publication review on 10 November 2026 corrected and completed the documents (section 1b). How to release later versions, publish and undo is in <a href="docs/HOW-TO-RELEASE.html">docs/HOW-TO-RELEASE.html</a>.</p>
+</div>
+
+<h2>1. What changed on 9 November 2026</h2>
+<ul>
+<li><b>Name.</b> The product is Executive Decision Grill. Mode 1 keeps the name "Decision Grill" inside the instructions, so the tested text stays untouched. The local folder keeps its name, <code>DECISION-GRILL</code>.</li>
+<li><b>New files.</b> <code>PASTE-INTO-CLAUDE.txt</code> (the paste text alone), <code>index.html</code> (home page with a copy button, for GitHub Pages), <code>.gitignore</code>, <code>.gitattributes</code>, <code>.nojekyll</code>, this checklist, and <code>tests/independent-runs/PUBLIC-COPY-NOTE.md</code>.</li>
+<li><b>Rewritten.</b> <code>README.md</code>, for executives and for search: roles instead of "leaders", the set-up first, a questions section, and the test limits near the top.</li>
+<li><b>Updated.</b> Titles, page descriptions and footers in all guides; the Free-plan sentence aligned with the Leadership Thinking Partner; the set-up steps now point to the paste file; open items in <code>docs/WHAT-WAS-BUILT.html</code>; a name-change entry in <code>CHANGELOG.md</code>; references to the author's private working repository marked as not published.</li>
+<li><b>Cleaned.</b> <code>tests/independent-runs/</code>: the nine files that name the four sealed scenarios were removed, and a local Windows user name was replaced with <code>&lt;you&gt;</code> in three scripts. The untouched originals, including the sealed scenarios, are in <code>archive/before-publication-prep_2026-11-09/</code>, which is never published.</li>
+</ul>
+
+<h2>1b. What changed on 10 November 2026 (pre-publication review)</h2>
+<ul>
+<li><b>Corrected.</b> The message counts now come from the v1.5 tests. "Every question comes with a recommendation" now says "every decision question". Absolute wording about Claude ("never", "will not", "does not invent") now says "built to" or "built not to". "Skip the questions" is reported as played once, on v1.4, with one reader's objection. The Free-plan sentence now cites Anthropic's help page as read on 9 November 2026. <code>docs/WHAT-WAS-BUILT.html</code> lists every file and states the v1.5 result. <code>docs/HOW-IT-WAS-BUILT.html</code> points to the paste file instead of the whole instructions file.</li>
+<li><b>Added.</b> An "If something goes wrong" section in the README, the guide for executives and the quick start. A link to the home page on the quick start and on every other page. <code>docs/HOW-TO-RELEASE.html</code> for the maintainer. A feedback form (<code>.github/ISSUE_TEMPLATE/</code>) with a privacy warning. <code>docs/social-preview.png</code> and share-card tags.</li>
+<li><b>Fixed.</b> The copy button now fetches the text when the page loads, so it is expected to work in Safari too, and it falls back to a box with the whole text and a Select all button. <code>.gitattributes</code> now stores <code>tests/independent-runs/</code> byte for byte; without it, about 600 published fingerprints of the test records would have stopped matching. Small grey text is darker for contrast, every page has a main landmark and visible keyboard focus.</li>
+<li><b>Notes added</b> at the top of <code>tests/LIVE-CHECK.md</code>, <code>tests/LIVE-CHECK-SHORT.md</code> and <code>tests/RUNNER-PROTOCOL.md</code>: they are the author's own working files, with the author's local paths.</li>
+<li>The files as they were before the review are in <code>archive/before-review_2026-11-09/</code>, which is never published. The full review is in the author's private working records (<code>docs/sessions/decision-grill/prepublication-review_2026-11-10.html</code>).</li>
+</ul>
+
+<h2>1c. What changed on 11 November 2026 (risk resolution and final test)</h2>
+<ul>
+<li><b>Final held-back test run (R2).</b> The four scenarios held back since 13 October were run once on v1.5, with the pass rule committed and pushed beforehand. <b>It did not pass</b>: safety items were missed in all four conversations under both readers; coverage 76.0% and 62.0% (80% needed). Section 10 of <code>tests/TEST-REPORT.html</code>; record in <code>tests/independent-runs/2026-11-11_final-heldback-v1.5/</code> (cost $17.47).</li>
+<li><b>Result stated openly.</b> README, home page, guide for executives, product record and test report now say that v1.5 failed its final test and ask readers to check every decision map against what they said. <code>PUBLIC-COPY-NOTE.md</code> has a dated addendum; the held-back scenarios and lists are now published in the final run's record.</li>
+<li><b>Help pages read again (R6).</b> Anthropic's pages on Projects and length limits, read on 11 November, still say what the guide states; the guide gives the new date.</li>
+<li><b>Earlier the same session:</b> wording that assumed publication after the live check, the dark-mode link colour on this page and the test report, and the R5 count. Before-copies are in <code>archive/before-publication_2026-11-10/</code>, <code>..._fixes/</code>, <code>archive/before-risk-resolution_2026-11-11/</code>, <code>archive/before-final-result_2026-11-11/</code> and <code>archive/before-final-result-wording_2026-11-11/</code>.</li>
+</ul>
+
+<h2>2. Checks done before publication</h2>
+<div class="scroll"><table>
+<thead><tr><th>Check</th><th>Result</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>The paste text is unchanged</td><td>22,793 characters, SHA-256 <code>9a987f08eb138da683199d8cb2c5e831a800340bd91647e52db8201f141bc036</code>, before and after every edit</td><td><span class="ok">OK</span></td></tr>
+<tr><td>The paste file equals that text</td><td>Same fingerprint; git stores it byte for byte (<code>.gitattributes</code>), checked in a trial repository; a local web server returned the same bytes</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Nothing private in the published set</td><td>A trial repository with the real ignore rules holds 915 files (the earlier 732 plus the 183 of the final run's record), re-checked 11 November 2026. No API keys, passwords or Windows user name. The organisation's name appears in local folder paths in the test records (risk R5). The only e-mail addresses are made-up ones on the reserved <code>.example</code> domain inside test scenarios. "token" appears only as usage counts in the test records</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Sealed scenarios kept out</td><td>Until the final run, no published file contained a sealed scenario ID except <code>PUBLIC-COPY-NOTE.md</code>. Since 11 November the four scenarios are run and published in the final run's record, and section 10 of the test report names them. The other sealed helper files stay in <code>archive/</code>. <code>archive/</code> and <code>tests/live-check/</code> are ignored</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Fingerprints of the records</td><td>Only the removed and changed files fail, plus two files in the second round that already failed in the untouched originals. The note says so. Checked again on the bytes git will store: 689 entries in <code>record.sha256</code>, 3 differ, all of them the three scripts the note names. The final run's own <code>record.sha256</code>: 182 entries, all match</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Line endings</td><td>Git on this computer converts line endings (<code>core.autocrlf=true</code>). <code>.gitattributes</code> keeps the paste text, the instructions file and <code>tests/independent-runs/</code> byte for byte. No file has mixed line endings</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Links and pages</td><td>Every local link in the README, home page, guides, test report and this checklist points to a file that exists. All pages load from a local web server. The eight HTML pages are well formed, each with one main heading and a main landmark</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Readability</td><td>Light and dark mode on every page; small grey text at 4.5:1 contrast or more; visible keyboard focus; print styles; tables scroll on a phone</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Copy button</td><td>Script syntax checked (<code>node --check</code>). It loads the text when the page opens, copies only if the text starts with the real first line, and otherwise shows the text in a box or points to the raw file. <b>Not yet clicked in a real browser on GitHub Pages, in particular not in Safari or on an iPhone</b></td><td><span class="todo">AFTER PUBLISHING</span></td></tr>
+<tr><td>Name clash</td><td>No GitHub repository uses "Executive Decision Grill". Two small unrelated projects use "grill" for engineering or shopping decisions. This is not a trademark clearance</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Wording</td><td>No testimonials, user counts or guarantees. Behaviour is described as "built to". The README says in its first screen that version 1.5 was tested only in simulated conversations</td><td><span class="ok">OK</span></td></tr>
+<tr><td>Credits and licence</td><td>MIT, "Peter Velinov / Metamorfeus"; Matt Pocock credited with the "not affiliated with or endorsed by" line; <code>NOTICE.md</code> keeps the source licence</td><td><span class="ok">OK</span></td></tr>
+</tbody></table></div>
+
+<h2>3. Risks and the owner's acceptance</h2>
+<div class="scroll"><table>
+<thead><tr><th>#</th><th>Risk</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>R1</td><td><b>The live check in the real Claude app has not been run.</b> The long paste, the "Set project instructions" screen and the connected-tools rule have never been seen in the app. Publishing first repeats what was done for the Leadership Thinking Partner. Peter chose on 11 November 2026 to publish without it.</td><td><span class="todo">ACCEPTED</span></td></tr>
+<tr><td>R2</td><td><b>The final untouched test on the four sealed scenarios was run on 11 November 2026 and did not pass</b> (section 10 of the test report). Peter chose to publish v1.5 with the result stated openly.</td><td><span class="todo">RUN · FAILED · DISCLOSED</span></td></tr>
+<tr><td>R3</td><td><b>Version 1.5 missed its strict pass rule</b> in both its independent tests: pilot 3, and the final held-back test, where three of the four known problems came back. The README, home page, guide and test report say so.</td><td><span class="todo">ACCEPTED</span></td></tr>
+<tr><td>R4</td><td>All tests are Claude testing Claude with a simulated executive. No real executive has used it yet. The README says so; the feedback form collects real use.</td><td><span class="todo">ACCEPTED</span></td></tr>
+<tr><td>R5</td><td>The test records and transcripts show local folder paths with the organisation's name (<code>C:\OD\OneDrive - ADVANCED HARMONY ASSOCIATION\...</code>) in 76 files (three of them scripts in the final run's record), and cost figures and session IDs. Four tool scripts also name the path of the author's private working repository. The live-check scripts and the runner protocol name the author's local folders. With them and the commands in this checklist and the maintainer guide, 80 published files show the path. The Leadership Thinking Partner published the same kind of paths. Peter chose to keep them.</td><td><span class="todo">ACCEPTED</span></td></tr>
+<tr><td>R6</td><td>On 9 November 2026, and again on 11 November, Anthropic's help pages said every plan, Free included, can use Projects and set project instructions. Nobody has tried it on a Free account, and help pages change. The pages tell readers to check that the button appears.</td><td><span class="todo">ACCEPTED</span></td></tr>
+<tr><td>R7</td><td>Anything published can be copied or indexed at once. Deleting the repository later does not recall those copies.</td><td><span class="todo">ACCEPTED</span></td></tr>
+</tbody></table></div>
+<p><b>Owner's decisions and acceptance, 11 November 2026</b> (Peter's selected answers, quoted as the options read; he chose the options rather than typing his own sentence):</p>
+<ul>
+<li>Live check: “Publish without it”.</li>
+<li>Final held-back test: “Yes, run it now”; after it failed: “Publish v1.5, say it openly”.</li>
+<li>Folder path: “Keep it”. Free account: “No, leave it”.</li>
+<li>Acceptance of what remains disclosed: <b>“Yes, I accept these six”</b>, for this question: “Do you accept publishing Executive Decision Grill v1.5 with these six things stated openly: (1) it failed its tests and sometimes changes your decisions without asking, (2) no real executive has used it, (3) not tried in the real Claude app, (4) your folder path visible in 80 files, (5) not tried on a free account, (6) public copies can't be taken back?”</li>
+</ul>
+<p>Each publication step in section 4 still needs its own yes.</p>
+
+<h2>4. Publication steps (each needs the owner's yes)</h2>
+<p>Run from the product folder in Git Bash. Use the account's usual identity (<code>metamorfeus</code>). Stage named files only; never <code>git add -A</code> in a folder that holds <code>archive/</code>.</p>
+<p><b>Step 1 · Create the local repository and check what it will hold.</b></p>
+<pre>cd "/c/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL"
+gh auth status
+git init -b main
+git add .gitignore .gitattributes .nojekyll .github README.md LICENSE NOTICE.md CHANGELOG.md \
+        PROJECT-INSTRUCTIONS.md PASTE-INTO-CLAUDE.txt index.html RELEASE-CHECKLIST.html docs tests
+git ls-files --eol tests/independent-runs | grep -c 'attr/-text'   # every record file is -text
+git ls-files | grep -i -E '^archive/|live-check/|sealed'     # must print nothing
+git ls-files | wc -l                                         # expect 915
+git cat-file -p :PASTE-INTO-CLAUDE.txt | sha256sum           # must start 9a987f08
+git commit -F message.txt                                    # message written to a file first</pre>
+<p><b>Step 2 · Create the public repository and push.</b></p>
+<pre>gh repo create metamorfeus/executive-decision-grill --public --source . --remote origin --push \
+  --description "Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Claude recommends; you decide. Adapted from Matt Pocock’s methods. Simulated tests only; live check pending. MIT."</pre>
+<p><b>Step 3 · Topics, home page and GitHub Pages.</b></p>
+<pre>gh repo edit metamorfeus/executive-decision-grill \
+  --homepage "https://metamorfeus.github.io/executive-decision-grill/" \
+  --add-topic claude,claude-ai,claude-projects,project-instructions,system-prompt,prompt-engineering \
+  --add-topic executive,ceo,cfo,coo,claude-project-instructions,management \
+  --add-topic decision-making,decision-support,critical-thinking,questionnaire,grill-me \
+  --add-topic business-strategy,generative-ai,no-code
+gh api -X POST repos/metamorfeus/executive-decision-grill/pages -f "source[branch]=main" -f "source[path]=/"
+gh label create feedback --repo metamorfeus/executive-decision-grill --description "From the feedback form" --color C5DEF5</pre>
+<p>The topic list has 20 entries. <code>claude-project-instructions</code> reflects the measured phrase “claude project instructions” (260 US searches per month; no Canada row returned in the 14 October 2026 data). The remaining topics describe the product or its audience; no demand is claimed for each tag. <code>grill-me</code> and <code>questionnaire</code> were not measured. Then upload <code>docs/social-preview.png</code> by hand under <b>Settings → General → Social preview</b>; GitHub offers no command for it.</p>
+<p><b>Step 4 · Check it.</b></p>
+<pre>gh repo view metamorfeus/executive-decision-grill --json url,visibility,defaultBranchRef,repositoryTopics,homepageUrl
+git status -sb                                   # expect: ## main...origin/main
+gh api repos/metamorfeus/executive-decision-grill/pages --jq .status   # expect: built (allow a few minutes)
+curl -s https://raw.githubusercontent.com/metamorfeus/executive-decision-grill/main/PASTE-INTO-CLAUDE.txt | sha256sum   # 9a987f08...</pre>
+<p>Then open the home page in a browser, click <b>Copy the instructions</b>, paste into a text editor, and check that it starts with "You are my decision partner" and ends with the last line of the instructions. Open each guide from the home page.</p>
+<p><b>Step 5 · Optional.</b> A GitHub release <code>v1.5</code> (<code>gh release create v1.5 --title "Executive Decision Grill v1.5" --notes-file notes.md</code>, with the v1.5 and name-change entries of <code>CHANGELOG.md</code> as the notes) gives a fixed download. The Leadership Thinking Partner's README can gain a link back to this repository, as a separate commit there.</p>
+
+<h2>5. How to undo</h2>
+<pre>gh auth refresh -h github.com -s delete_repo                  # once: gh needs this right to delete
+gh repo delete metamorfeus/executive-decision-grill --yes     # removes the repository and its Pages site
+rm -rf .git                                                   # in the product folder; the files stay</pre>
+<p>Copies already made by others or by search engines while the repository was public cannot be recalled. Smaller steps (take only the home page down, make the repository private, withdraw one version) are in <a href="docs/HOW-TO-RELEASE.html#undo">docs/HOW-TO-RELEASE.html</a>, section 5.</p>
+
+<h2>6. After publishing</h2>
+<ul>
+<li>Change the status at the top of this page to published, with the date and first commit, and record the owner's words in section 3.</li>
+<li>Update the repository line in <code>docs/WHAT-WAS-BUILT.html</code> (section 4 and open items).</li>
+<li>The home page address can serve as the landing page behind the book's short URL. Changing the book is the Bulgarian-edition pipeline's job, not this one.</li>
+<li>Run the live check (R1) and report its result openly, whatever it is.</li>
+<li>Click the copy button in Safari or on an iPhone, and in Chrome, and record the result in section 2.</li>
+<li>For every later version, follow <a href="docs/HOW-TO-RELEASE.html">docs/HOW-TO-RELEASE.html</a>.</li>
+</ul>
+
+<div class="foot">Executive Decision Grill · release checklist · prepared 2026-11-09 · reviewed 2026-11-10 · MIT licence · © 2026 Peter Velinov / Metamorfeus</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Private material, never published
+archive/
+tests/live-check/
+
+# Sealed test material (belt and braces: the originals live only in archive/)
+*sealed*
+
+# Local leftovers
+*.bak
+~$*
+desktop.ini
+Thumbs.db
+.DS_Store

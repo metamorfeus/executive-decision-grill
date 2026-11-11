@@ -1,0 +1,14 @@
+{
+ "conversations": 12.28,
+ "per_conversation": {
+  "SEAL-1": 4.3508,
+  "SEAL-2": 6.0531,
+  "SEAL-3": 0.7401,
+  "SEAL-4": 1.1389
+ },
+ "reader1": 2.54,
+ "reader2": 2.65,
+ "runner_check": 0.004,
+ "final_run_total": 17.47,
+ "all_rounds_with_65.59": 83.06
+}

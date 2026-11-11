@@ -1,0 +1,11 @@
+{
+ "test_id": "NEW-3",
+ "label": "P2",
+ "status": "complete",
+ "assistant_turns": 8,
+ "executive_calls": 9,
+ "cost_usd_assistant": 0.8908,
+ "cost_usd_executive": 0.2499,
+ "cost_usd_total": 1.1407,
+ "transcript": "C:\\OD\\OneDrive - ADVANCED HARMONY ASSOCIATION\\METAMORFEUS\\DECISION-GRILL\\tests\\independent-runs\\2026-10-13_pilot2-v1.4\\runs\\NEW-3\\NEW-3_P2.md"
+}

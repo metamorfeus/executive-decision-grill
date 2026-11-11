@@ -1,0 +1,7 @@
+# Keep the tested instruction text byte for byte (fingerprint in CHANGELOG.md)
+PASTE-INTO-CLAUDE.txt -text
+PROJECT-INSTRUCTIONS.md -text
+
+# Keep the test records byte for byte, so the fingerprints in their inputs.sha256 and record.sha256
+# files still match after publication (git on Windows would otherwise change their line endings)
+tests/independent-runs/** -text

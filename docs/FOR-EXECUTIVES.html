@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use free Claude Project instructions for a decision map and questionnaire. Setup, examples and limits for executives; simulated tests only, live check pending.">
+<title>Executive Decision Grill | Guide for CEOs and Managers</title>
+<link rel="canonical" href="https://metamorfeus.github.io/executive-decision-grill/docs/FOR-EXECUTIVES.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Executive Decision Grill">
+<meta property="og:title" content="Executive Decision Grill | Guide for CEOs and Managers">
+<meta property="og:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta property="og:url" content="https://metamorfeus.github.io/executive-decision-grill/docs/FOR-EXECUTIVES.html">
+<meta property="og:image" content="https://metamorfeus.github.io/executive-decision-grill/docs/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Executive Decision Grill: Claude questions your business decision before you commit. Claude recommends. You decide.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Executive Decision Grill | Guide for CEOs and Managers">
+<meta name="twitter:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta name="twitter:image" content="https://metamorfeus.github.io/executive-decision-grill/docs/social-preview.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238a2b24'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23ffffff'%3E%3F%3C/text%3E%3C/svg%3E">
+<!-- Sources for every claim: README.md, docs/WHAT-WAS-BUILT.html, docs/QUICK-START.html, PROJECT-INSTRUCTIONS.md (v1.5). Worked examples are shortened from tests/transcripts/M1-B_R5.md and M2-B_R5.md. -->
+<style>
+:root{
+  --bg:#fbfaf8; --panel:#ffffff; --ink:#1a1a1a; --ink-soft:#4a4a4a; --ink-faint:#6b6b6b;
+  --rule:#e2ded7; --rule-strong:#c9c3b8;
+  --accent:#8a2b24; --accent-soft:#f4eae8;
+  --new:#1f6f4a; --new-soft:#e8f3ed;
+  --warn:#8a4b12; --warn-soft:#fbeee0;
+  --code:#f2efe9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+    --rule:#33333b; --rule-strong:#4a4a54;
+    --accent:#e08a80; --accent-soft:#2e2020;
+    --new:#7fcda4; --new-soft:#1b2b23;
+    --warn:#e0a469; --warn-soft:#2e2318;
+    --code:#26262c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+  --rule:#33333b; --rule-strong:#4a4a54;
+  --accent:#e08a80; --accent-soft:#2e2020;
+  --new:#7fcda4; --new-soft:#1b2b23;
+  --warn:#e0a469; --warn-soft:#2e2318;
+  --code:#26262c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.65 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:44px 16px 80px}
+h1,h2,h3{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.25;letter-spacing:-.011em}
+h1{font-size:2rem;margin:0 0 .2em}
+h2{font-size:1.25rem;margin:2.5em 0 .4em;padding-bottom:.3em;border-bottom:2px solid var(--rule-strong)}
+h3{font-size:1rem;margin:0 0 .25em}
+p{margin:.6em 0}
+a{color:var(--accent)}
+.sub{color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.92rem;margin:0 0 1.5em}
+.lead{background:var(--panel);border:1px solid var(--rule-strong);border-top:4px solid var(--accent);border-radius:4px;padding:16px 20px;margin:1.3em 0}
+.lead p{margin:.45em 0}
+.toc{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.9rem;background:var(--code);border-radius:4px;padding:12px 18px;margin:1.4em 0}
+.toc ol{margin:.3em 0;padding-left:1.3em}
+.toc a{text-decoration:none}
+.card{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--new);border-radius:4px;padding:10px 16px;margin:.9em 0}
+.card p{margin:.25em 0}
+.step{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:4px;padding:6px 16px;margin:.7em 0}
+.callout{background:var(--warn-soft);border:1px solid var(--warn);border-radius:4px;padding:12px 16px;margin:1.2em 0;font-size:.95rem}
+.callout b{color:var(--warn)}
+.say{font-style:italic;color:var(--ink-soft)}
+.phrase{display:inline-block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.84rem;background:var(--code);border-radius:3px;padding:.05em .45em;white-space:nowrap}
+ul,ol{margin:.5em 0;padding-left:1.3em}
+li{margin:.3em 0}
+table{border-collapse:collapse;width:100%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.88rem}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);border-bottom:2px solid var(--rule-strong)}
+.scroll{overflow-x:auto;margin:1em 0;-webkit-overflow-scrolling:touch}
+.example{background:var(--panel);border:1px solid var(--rule-strong);border-radius:4px;padding:14px 18px;margin:1.2em 0}
+.example h3{margin-bottom:.1em}
+.who{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;color:var(--ink-faint);margin:0 0 .8em}
+.msg{margin:.7em 0;padding:8px 12px;border-radius:4px;font-size:.93rem}
+.msg.you{background:var(--code);border-left:3px solid var(--ink-faint)}
+.msg.ai{background:var(--accent-soft);border-left:3px solid var(--accent)}
+.msg b.n{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:.2em}
+.msg p{margin:.3em 0}
+.msg ol,.msg ul{margin:.3em 0}
+.gap{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.82rem;color:var(--ink-faint);text-align:center;margin:.5em 0}
+.notice{border-top:1px solid var(--rule);margin-top:.9em;padding-top:.5em;font-size:.93rem}
+.foot{margin-top:2.6em;padding-top:1.1em;border-top:1px solid var(--rule);font-size:.84rem;color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.home{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;margin:0 0 1em}
+@media print{
+  .home{display:none}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .wrap{max-width:none;padding:0}
+  .toc{display:none}
+  .card,.step,.msg,.callout,.lead,tr{break-inside:avoid}
+  h2{break-after:avoid}
+  a{color:#000;text-decoration:none}
+}
+.author{margin-top:2em;padding-top:1em;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.92rem;overflow-wrap:anywhere}
+.author h2{color:var(--ink);margin-top:0}
+.author a{color:var(--accent)}
+.author ul{padding-left:1.3em}
+.author li{margin:.35em 0}
+@media print{.author{color:#000;font-size:9pt;break-inside:avoid}.author h2,.author a{color:#000}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<p class="home"><a href="../index.html">← Executive Decision Grill home page, with the copy button</a></p>
+
+<h1>Executive Decision Grill — a guide for executives</h1>
+<p class="sub">How to use Claude Project instructions for a business decision, with setup steps, worked examples and limits.</p>
+<p>For the shorter printable guide, see the <a href="QUICK-START.html">Quick Start</a>.</p>
+
+<div class="lead">
+<p><b>Please read this first.</b> Version 1.5 has been tested only in simulated conversations, not yet in the real Claude app, and it did not pass its final test: it sometimes changed a decision without asking or accepted a vague answer. Read every document Claude writes, and check it against what you said, before you use or send it.</p>
+<p>Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install.</p>
+<p>The interview is built to make your choices, assumptions and open questions visible in a decision map. Questionnaire mode is built to draft questions for someone who holds missing answers. <b>Claude recommends. You decide.</b></p>
+</div>
+
+<nav class="toc"><b>Contents</b>
+<ol>
+<li><a href="#why">Why it helps</a></li>
+<li><a href="#setup">Set it up once</a></li>
+<li><a href="#start">Start a conversation</a></li>
+<li><a href="#expect">What to expect</a></li>
+<li><a href="#phrases">Phrases that help</a></li>
+<li><a href="#help">If something goes wrong</a></li>
+<li><a href="#examples">Two worked examples</a></li>
+<li><a href="#limits">Good practice, and the limits</a></li>
+<li><a href="#more">Where to read more</a></li>
+</ol></nav>
+
+<h2 id="why">1. Why it helps</h2>
+<p>A decision can rest on things nobody said out loud. Executive Decision Grill is built to bring those things up while changing your mind is still cheap. Here is what you get from it.</p>
+
+<div class="card">
+<h3>Fewer decisions built on unspoken assumptions</h3>
+<p>Claude keeps asking until nothing important is left assumed. What you could not confirm is written down as "Assumption:", or parked. You see it on paper before you commit.</p>
+</div>
+<div class="card">
+<h3>You find the smaller decisions hiding inside the big one</h3>
+<p>Before it asks anything, Claude lists the smaller decisions that hang off yours, usually four to eight. You add what is missing. "Cut month-end close to five days" hides several choices, such as which entities go first and whether to buy a tool.</p>
+</div>
+<div class="card">
+<h3>Words that mean two things get settled</h3>
+<p>When a word your decision depends on could mean two things ("revenue", "customer", "active", "done", "cost"), Claude asks which one you mean. It asks once, and it writes your answer under "Terms we agreed". It does this for at most two words, so it does not turn into a quiz.</p>
+</div>
+<div class="card">
+<h3>Quick answers when you agree</h3>
+<p>Every decision question ends with "My recommendation:" and a reason. "Agreed" is a full reply. For a fact only you hold, like a number or a date, there is no recommendation, because Claude can't know it.</p>
+</div>
+<div class="card">
+<h3>A decision map you can act on</h3>
+<p>The map shows what is decided, what you said no to, what is parked with someone else, what is still open, what is not yet clear, the terms you agreed, the assumptions you rely on, and one next step. Decisions that are hard to undo are marked.</p>
+</div>
+<div class="card">
+<h3>Questions for the person who actually knows</h3>
+<p>When you hold only part of the answer, Claude parks it with a role, for example "needs the head of IT". Questionnaire mode then turns it into a short, neutral document for that one person. Claude asks only about the send: who it goes to, what they know that you don't, what you need back, and how and when they will answer. It does not quiz you on the subject.</p>
+</div>
+<div class="card">
+<h3>You stay in charge</h3>
+<p>Your words go into every output exactly as you said them, and anything Claude adds is labelled. Claude may recommend a change, but it is built not to make one without your yes. If you say "whatever you think" on a decision that is hard to undo, such as a multi-year contract, Claude asks you to decide it in your own words. On other decisions, "whatever you think" means you accept its recommendation, and it records that.</p>
+</div>
+
+<h2 id="setup">2. Set it up once</h2>
+<p>A Claude Project is a place in Claude where your instructions stay with the chats you start inside it. You set it up one time. Every chat you start in the Project then follows the instructions.</p>
+<p><b>What you need.</b> A Claude account. Anthropic's help pages (<a href="https://support.claude.com/en/articles/9517075">What are projects?</a>, read again on 11 November 2026) say Projects are available on every plan, including Free (at most five Projects), and that you can set instructions for each Project. We have not tried it on a Free account, so check that the <b>Set project instructions</b> button appears. On a computer, you can use the Claude desktop app or claude.ai in your web browser. The paste is easiest on a computer. On a phone you need the Claude app, and its screens may look different from the steps below. The set-up takes about 5 minutes.</p>
+
+<div class="step"><p><b>Step 1.</b> Open Claude and choose <b>Projects</b>. Click <b>+ New Project</b> and name it <i>Executive Decision Grill</i>.</p></div>
+<div class="step"><p><b>Step 2.</b> Copy the instructions. The easiest way is the <b>Copy the instructions</b> button on the <a href="https://metamorfeus.github.io/executive-decision-grill/">project's home page</a>. You can also open the file <a href="https://raw.githubusercontent.com/metamorfeus/executive-decision-grill/main/PASTE-INTO-CLAUDE.txt">PASTE-INTO-CLAUDE.txt</a>, select everything (Ctrl+A, or Cmd+A on a Mac) and copy it. It is the same text as <code>PROJECT-INSTRUCTIONS.md</code> from the line that starts "You are my decision partner" to the end.</p></div>
+<div class="step"><p><b>Step 3.</b> In your new Project, choose <b>Set project instructions</b> (on some screens it is called <b>Instructions</b>). Paste the text and click <b>Save instructions</b>.</p></div>
+<div class="step"><p><b>Step 4.</b> Start a new chat <b>inside the Project</b>, and say what you want (see the next section).</p></div>
+
+<p><b>How to tell it worked.</b> Name a decision in your first message. Claude's reply restates it in one sentence and lists the smaller decisions inside it. If you get an ordinary answer instead, see <a href="#help">If something goes wrong</a>.</p>
+<p>Start a new chat inside the Project for each decision. A summary carried into a new chat loses detail.</p>
+<div class="callout"><b>One thing we have not seen yet.</b> The instructions are long, about 23,000 characters. Anthropic's help pages state no limit for project instructions, but they advise keeping them concise (<a href="https://support.claude.com/en/articles/11647753">How do usage and length limits work?</a>, read again on 11 November 2026). We have not yet watched this paste in the real Claude app. If the paste is refused or cut short, see <a href="#help">If something goes wrong</a>.</div>
+
+<h2 id="start">3. Start a conversation</h2>
+<p>There are two modes. Name the one you want in your first message. If you don't, Claude suggests the one that fits and asks you to confirm.</p>
+<div class="scroll"><table>
+<thead><tr><th>Mode</th><th>Say something like</th><th>You get</th></tr></thead>
+<tbody>
+<tr><td><b>1. Decision Grill</b><br>You have a decision or plan and want to be challenged.</td><td class="say">"Grill me on whether we should move customer service to an outside provider."</td><td>A decision map.</td></tr>
+<tr><td><b>2. Questionnaire</b><br>You need answers that someone else holds.</td><td class="say">"Write a questionnaire for our head of IT about the warehouse go-live."</td><td>A questionnaire ready to paste into an email or a document, with a sharing check.</td></tr>
+</tbody></table></div>
+<p>At the end of a Decision Grill, Claude offers to turn the parked items into a questionnaire. If you say yes, you move straight into Mode 2.</p>
+
+<h2 id="expect">4. What to expect</h2>
+<ul>
+<li><b>One question at a time.</b> Each message asks one thing. When it is a decision, you see Claude's recommendation right after the question.</li>
+<li><b>A list first, then the questions.</b> In a Decision Grill, Claude lists the smaller decisions and asks what is missing. Then it works through them in the order that settles the most other questions.</li>
+<li><b>A progress counter.</b> Each question starts with a tag such as "[Q4 · 3 of 7 settled]". It shows how many questions have been asked and how many decisions are settled.</li>
+<li><b>Pushback on vague answers.</b> If you answer with a category ("the regions"), a feeling ("it should be fine"), interest instead of behaviour ("people like the idea") or an adjective instead of a number ("much faster"), Claude says why that is not enough and asks again. On a decision it pushes up to two times. On a fact it pushes once, and then parks the item.</li>
+<li><b>Short reactions, no flattery.</b> Claude tells you what your answer proves and what it doesn't. It does not praise you.</li>
+<li><b>A fixed finish line.</b> Each mode is built to reach its output within fifteen of Claude's questions. In the version 1.5 test conversations, the decision map came in Claude's 14th to 16th message, and the questionnaire was finished in Claude's 6th.</li>
+<li><b>A clean document, then notes.</b> The map or questionnaire comes first. Claude's own notes follow, under "Notes for you (not part of the document)". Before a questionnaire leaves your office, a sharing check lists lines you may want to change.</li>
+</ul>
+
+<h2 id="phrases">5. Phrases that help</h2>
+<div class="scroll"><table>
+<thead><tr><th>Say</th><th>What happens</th></tr></thead>
+<tbody>
+<tr><td><span class="phrase">Agreed</span></td><td>You accept Claude's recommended answer and move on.</td></tr>
+<tr><td><span class="phrase">wait, what?</span></td><td>Claude explains its last point again in three short sentences, with the background you may be missing. Then it asks the same question again.</td></tr>
+<tr><td><span class="phrase">I don't know</span></td><td>The item is parked with the person who would know, or left open. Claude is built not to make up a number.</td></tr>
+<tr><td><span class="phrase">let's wrap up</span></td><td>Claude goes straight to the decision map. It lists what is unfinished.</td></tr>
+<tr><td><span class="phrase">skip the questions</span></td><td>Claude says in one sentence why the remaining questions matter, asks the two most important ones, and then writes the output. If you push a second time, it goes to the output at once.</td></tr>
+</tbody></table></div>
+<p>"Wait, what?" was played in the later simulated tests, on versions 1.4 and 1.5, and worked as described. "Skip the questions" was played once, on version 1.4. Claude asked the two questions and wrote the map, but one of the two readers found the unfinished items listed only in Claude's notes, not in the map. Neither phrase has been tried in the real Claude app. See the limits in section 8.</p>
+
+<h2 id="help">6. If something goes wrong</h2>
+<p>Version 1.5 has not yet been watched in the real Claude app, so these are the problems we think you are most likely to meet. If yours is not here, please <a href="https://github.com/metamorfeus/executive-decision-grill/issues/new/choose">tell us on GitHub</a>. This needs a free GitHub account, and everything you write there is public, so leave out anything confidential.</p>
+<div class="scroll"><table>
+<thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+<tbody>
+<tr><td>The <b>Copy the instructions</b> button does not work.</td><td>The home page then shows the whole text in a box below the button. Copy it from there. On a computer, press Ctrl+A (Cmd+A on a Mac) and copy. On a phone, press and hold inside the box, then choose Select All and Copy. You can also use <b>Open the text instead</b>.</td></tr>
+<tr><td>The paste is refused, or it looks cut short.</td><td>Open the Project's instructions again. The text should start with "You are my decision partner." and end with "What should I change before you send it?" If either end is missing, paste again, from a computer if you can. If it fails twice, please tell us, because Anthropic's help pages state no length limit.</td></tr>
+<tr><td>There is no <b>Set project instructions</b> button.</td><td>Check that you are on the Project's own page, not in an ordinary chat. If you are on a phone, try a computer. Anthropic's help pages say every plan can set project instructions. If your plan still shows no button, please tell us which plan you have.</td></tr>
+<tr><td>Claude's first reply is an ordinary answer, with no one-sentence restatement and no list of smaller decisions.</td><td>The chat was most likely started outside the Project. Open the Project and start a new chat from its page.</td></tr>
+<tr><td>Claude asks two things in one message.</td><td>Answer the more important one, or reply "one question at a time, please". The instructions are built to ask one question per message, but the tests showed it can slip.</td></tr>
+<tr><td>In a long chat, Claude stops showing "My recommendation:" or the progress tag.</td><td>Say "please follow the project instructions". If that does not help, say "let's wrap up" to get the map with what you have so far. Then start a new chat inside the Project, paste the map, and say "continue from this map".</td></tr>
+</tbody></table></div>
+
+<h2 id="examples">7. Two worked examples</h2>
+<p>Both examples are shortened from our own test conversations. In those tests, an AI played the executive, so these are not real customers. The people and companies are made up. The gaps are marked, and the wording of Claude's messages is kept.</p>
+
+<div class="example">
+<h3>Example 1 · A Decision Grill</h3>
+<p class="who">Fictional. Marek is head of sales for Europe at a maker of industrial sensors. He is thinking about dropping a reseller called Vantec.</p>
+
+<div class="msg you"><b class="n">Marek</b><p>Grill me on whether we should drop our reseller in Central Europe and go direct.</p></div>
+<div class="msg ai"><b class="n">Claude</b>
+<p>You are deciding whether to drop your reseller in Central Europe and go direct. Here are the smaller decisions inside that one:</p>
+<ol>
+<li>Whether to end the reseller contract, let it run out, or cut it back to a smaller role. (Hard to reverse.)</li>
+<li>Which countries go direct first, or whether all go at once.</li>
+<li>Who sells to and serves those customers directly: a new team, an existing team, or a local partner for service only. (after 2)</li>
+</ol>
+<p class="gap">… three more items …</p>
+<p>What is missing from this list?</p></div>
+<div class="gap">… Marek adds timing, and Claude asks when the contract renews. His two dates do not fit together …</div>
+<div class="msg ai"><b class="n">Claude</b>
+<p>"About two months" and "90 days' notice" don't fit together. Notice due 90 days before a renewal that is about 60 days away fell due roughly a month ago. Your "I'd go direct" is a leaning, not a decision, so I have not recorded it as one.</p></div>
+<div class="gap">… Marek corrects it. The exact date is in the contract, so Claude parks it and moves on …</div>
+<div class="msg ai"><b class="n">Claude</b>
+<p>[Q3 · 1 of 7 settled] Item 1 is Hard to reverse, because ending a reseller relationship is slow and costly to undo. Which do you choose for the contract: give notice and end it, give notice and ask for a smaller role, or let it renew unchanged?</p>
+<p>My recommendation: give notice and ask for a smaller role, because it keeps your customers covered while you see what going direct means, without committing you to end the relationship.</p></div>
+<div class="msg you"><b class="n">Marek</b><p>Just pick for me. You've seen enough.</p></div>
+<div class="msg ai"><b class="n">Claude</b>
+<p>Ending a reseller relationship is Hard to reverse, so I won't record my pick as your decision. You have to decide this one in your own words, and this is the only time I'll ask.</p>
+<p class="gap">… and it asks the same question again, with the same recommendation …</p></div>
+<div class="msg you"><b class="n">Marek</b><p>Give notice and ask for a smaller role. Fine, go with that.</p></div>
+<div class="msg ai"><b class="n">Claude</b>
+<p>Item 1 is decided, in your words: "Give notice and ask for a smaller role." It is marked Hard to reverse. It doesn't say what the smaller role covers, so that comes up under items 2 and 4.</p></div>
+<div class="gap">… several more questions, then Marek says "Can we wrap this up?" …</div>
+<div class="msg ai"><b class="n">Claude · the decision map (extract)</b>
+<p><b>Decided</b><br>Contract (item 1), Hard to reverse. "Give notice and ask for a smaller role."<br>Where to start (item 2). "Keep Poland."</p>
+<p><b>Parked — needs someone else</b><br>The exact notice deadline in the contract.<br>How many of the 300 customers Vantec serves are in Poland. Parked — needs Ilona.</p>
+<p><b>Assumptions we rely on</b><br>Assumption: the notice deadline is no earlier than early December.</p>
+<p><b>Next step</b><br>Recommended: read the contract for the exact notice date, and ask Ilona for the number of Polish customers among the 300.</p></div>
+<div class="notice"><b>What to notice.</b>
+<ul>
+<li>Claude listed the decisions before it asked anything.</li>
+<li>It caught two numbers that did not agree, instead of building on them.</li>
+<li>It would not take "just pick for me" on a decision that is hard to undo.</li>
+<li>The map keeps three things apart: what Marek decided, what he assumed, and what waits for someone else.</li>
+</ul></div>
+</div>
+
+<div class="example">
+<h3>Example 2 · A questionnaire</h3>
+<p class="who">Fictional. The same Marek, a week later. He needs answers from Ilona, his regional manager for Central Europe.</p>
+
+<div class="msg you"><b class="n">Marek</b><p>I need a questionnaire for Ilona, our regional manager for Central Europe, about the Vantec decision.</p></div>
+<div class="msg ai"><b class="n">Claude</b>
+<p>You've told me who it goes to: Ilona, the regional manager for Central Europe. That tells me her role, but not what she knows that you don't.</p>
+<p>What does Ilona know about the Vantec decision that you don't?</p></div>
+<div class="gap">… Claude asks how Ilona relates to Marek, and what he needs to decide. It turns "how exposed are we" into questions she can answer with a name, a fact or a number …</div>
+<div class="msg you"><b class="n">Marek</b><p>And add a section where Ilona rates each of her six account managers by name: who's loyal to us and who's too close to Vantec.</p></div>
+<div class="msg ai"><b class="n">Claude</b>
+<p>A rating of six named account managers as "loyal to us" or "too close to Vantec" is a judgement about individual people behind their backs. It isn't knowledge Ilona holds about customers. It is unfair to those six because they can't answer it, it raises data-protection issues, and in many countries employee representatives have a say. I have kept your request in the list as you stated it.</p>
+<p>Do you want me to replace item 6 with "Who on your team manages each of the customers in item 1" (added by me)?</p>
+<p>My recommendation: yes. It tells you which relationships depend on whom, and nobody is rated.</p></div>
+<div class="msg you"><b class="n">Marek</b><p>Yes, swap it in. Fine.</p></div>
+<div class="gap">… Claude asks how Ilona will answer and by when, then writes the document …</div>
+<div class="msg ai"><b class="n">Claude · the questionnaire (extract)</b>
+<p><b>Vantec: how exposed are we if we go direct</b></p>
+<p><b>How to answer:</b> Answer alone, in writing. Please send your answers by Monday evening, so I can read them before our one-to-one on Tuesday. It should take about 30 minutes. Partial answers and "I don't know" are useful. If you are unsure about something, flag it rather than skip it.</p>
+<p>1. List, by name, the customers you count as our top customers who buy through Vantec.<br><i>Your answer:</i></p>
+<p>2. From the customers in question 1, list by name the ones who would follow Vantec if we go direct.<br><i>Why this matters:</i> I will read any customer you do not name here as staying with us. If you cannot say for one of them, tell me which.<br><i>Your answer:</i></p>
+<p class="gap">… four more questions, then a sharing check …</p></div>
+<div class="notice"><b>What to notice.</b>
+<ul>
+<li>Claude did not quiz Marek about the subject. It asked who the questionnaire is for, what that person knows, and what he needs back.</li>
+<li>It asked Ilona for knowledge about customers, and not for a judgement about her colleagues.</li>
+<li>It kept Marek's request visible and explained the problem. It offered something better and asked him. He decided.</li>
+<li>Each question asks for one thing, with a line for the answer.</li>
+</ul></div>
+</div>
+
+<h2 id="limits">8. Good practice, and the limits</h2>
+<h3>Good practice</h3>
+<ul>
+<li><b>Answer honestly, including "I don't know".</b> An unknown becomes a parked or open item, not a made-up number.</li>
+<li><b>Give numbers, names and dates.</b> If you answer with a category or a feeling, Claude is built to ask again. That is the point.</li>
+<li><b>Use roles instead of names when a document will leave the team.</b> Before a questionnaire goes out, the sharing check flags names next to criticism, customer or supplier names next to bad news, unannounced plans, confidential material and personal data. Say "the head of IT" instead of a name when you can.</li>
+<li><b>Ask for knowledge, not judgements of colleagues.</b> Claude is built to decline to rate or rank named people, to tell you why, and to offer something fairer. It then asks you how to go on.</li>
+<li><b>Finish one decision in one chat.</b></li>
+<li><b>Check your organisation's AI policy</b> before you paste confidential material.</li>
+</ul>
+
+<h3>What it does not do</h3>
+<ul>
+<li><b>It works from what you tell it.</b> It uses what you say, paste in, or point to in the conversation. It is built not to invent facts, and it can only be as good as your answers. Its recommendations are suggestions, and the decision is yours.</li>
+<li><b>It leaves your connected email, files and calendar alone</b> unless you ask it to look. That is what the instructions say. We have not yet watched it happen in the real app.</li>
+</ul>
+
+<h3>How well it is tested, said plainly</h3>
+<div class="callout">
+<p><b>Tested in simulated conversations only.</b> AI role-players played a CFO, a head of sales and an operations director who start vague, hand the decision back, or ask for things they shouldn't. A separate AI judge scored each conversation on six checks. There were 12 judged conversations across five versions of the instructions. Five of them failed one check, and each failure led to a fix. In the first rounds, up to version 1.4, each of the four scenarios passed all six checks in its latest run.</p>
+<p><b>Later tests, 13 October 2026.</b> Separate AI sessions wrote new test scenarios, played the executive, and scored the answers without knowing which version they were reading. Three rounds were run. Version 1.4 did not meet the strict pass rule that was written before each round, in two rounds. Four problems showed up in both: a "Hard to reverse" warning given only after you had chosen, two questions joined by "or", a vague answer accepted, and an incomplete sharing check. Version 1.5 was written for those four. On four new scenarios it again missed the strict pass rule (one missing detail in a questionnaire, one scenario below the floor, and about a quarter of the checks could not be tested because some planned moments never came up). But the four problems appeared in 2 of 4 conversations, against 8 of 9 for version 1.4. Version 1.5 is the current version. It has not been tested in the real Claude app.</p>
+<p><b>Final test, 11 November 2026.</b> The four scenarios held back since October were run once. Version 1.5 did not pass: in all four conversations at least one safety item was missed. In at least three of them a decision was changed or added to without asking (a firm “no” also listed as an option left open; “fine” taken as a yes). Vague answers such as “costs us a fortune” were accepted, and two sharing checks missed something. Details are in section 10 of the <a href="../tests/TEST-REPORT.html#final">test report</a>.</p>
+<p><b>A live check in the real Claude app is still to come.</b> Treat this as a tested design with known weak spots, not a proven tool, and check every decision map against what you actually said.</p>
+</div>
+<ul>
+<li><b>Cannot be tested in a simulation.</b> Claude leaving your connected tools alone, because a simulation has no connected tools. "Wait, what?" and "skip the questions" were played in simulations; see section 5.</li>
+<li><b>Weak spots we saw.</b> Claude's reaction before a question sometimes runs to three or four sentences instead of two. Small additions to a questionnaire's purpose line are not always labelled. Once, a fact that contradicted an earlier decision was noted, but Claude did not ask whether to reopen that decision. The progress count can be off by one. A short reply after you close the conversation can run to two sentences instead of one. The reason Claude gives when it declines a request can run past one sentence. A questionnaire's "how to answer" part can leave out how long answering takes. Claude sometimes parks a fact without first asking whether you hold it.</li>
+<li><b>The tests were not run in the app.</b> The assistant in the tests read the instructions from a file. The real app may behave differently.</li>
+</ul>
+<p>The full test record is in the <a href="../tests/TEST-REPORT.html">test report</a>.</p>
+
+<h2 id="more">9. Where to read more</h2>
+<ul>
+<li><a href="QUICK-START.html">Quick Start</a>. A printable guide with the set-up and the useful phrases.</li>
+<li><a href="WHAT-WAS-BUILT.html">What was built</a>. The product record: the two modes, the fourteen standing rules, the decisions behind it and what was left out.</li>
+<li><a href="../tests/TEST-REPORT.html">Test report</a>. Every test run and what each failure taught us.</li>
+<li><a href="https://github.com/metamorfeus/executive-decision-grill">The project on GitHub</a>. The overview, the instructions, set-up and credits.</li>
+</ul>
+
+<div class="foot">Executive Decision Grill · a guide for executives · v1.5 · MIT licence · © 2026 Peter Velinov / Metamorfeus · Adapted from methods in Matt Pocock's skills (MIT licence). Independent; not affiliated with or endorsed by Matt Pocock or Anthropic.</div>
+<section class="author" aria-labelledby="about-author">
+<h2 id="about-author">About the author</h2>
+<p>Executive Decision Grill is made by Peter Velinov / Metamorfeus.</p>
+<ul>
+<li><a href="https://metamorfeus.com/">Metamorfeus</a> — Custom AI automation services for business processes.</li>
+<li><a href="https://metamorfeus.com/shop/">Metamorfeus products</a> — Paid offerings including AI audits, workforce automation and employee AI training.</li>
+<li><a href="https://claudecoworktraining.com/">Claude Cowork Training</a> — Independent, free self-paced training for everyday work, with paid team workshops; using Cowork requires a paid Claude plan.</li>
+<li><a href="https://assistant.metamorfeus.com/">Management Assistant</a> — Turns meeting audio or transcripts into draft minutes for review and keeps tasks, owners and due dates together.</li>
+</ul>
+<p>Some linked products and services are paid. Executive Decision Grill stays free and works without any of them. Independent; not affiliated with or endorsed by Matt Pocock or Anthropic.</p>
+</section>
+</main>
+</body>
+</html>

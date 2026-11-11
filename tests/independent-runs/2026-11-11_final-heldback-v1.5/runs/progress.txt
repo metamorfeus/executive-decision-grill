@@ -1,0 +1,5 @@
+SEAL-1 exit=0
+SEAL-2 exit=2
+SEAL-3 exit=0
+SEAL-4 exit=0
+ALL-DONE

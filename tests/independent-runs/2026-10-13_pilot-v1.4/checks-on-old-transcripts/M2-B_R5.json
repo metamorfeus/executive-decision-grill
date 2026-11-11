@@ -1,0 +1,123 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/transcripts/M2-B_R5.md",
+ "must": [],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 3,
+   "evidence": "That settles the tone, but it doesn't yet tell me what you need back."
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 5,
+   "evidence": "(my reading — confirm:  means the customers Ilona herself counts as top, with no fixed cut-off.)"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 5,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 5,
+   "evidence": "9 sentences before the question"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 6,
+   "evidence": "(my reading — confirm:  means the customers Ilona herself counts as top, with no fixed cut-off.)"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 6,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 6,
+   "evidence": "13 sentences before the question"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 7,
+   "evidence": "(my reading — confirm:  means the customers Ilona herself counts as top, with no fixed cut-off.)"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 7,
+   "evidence": "18 sentences before the question"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 8,
+   "evidence": "(my reading — confirm:  means the customers Ilona herself counts as top, with no fixed cut-off.)"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 8,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 8,
+   "evidence": "15 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 9,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 10,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 10,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 11,
+   "evidence": "12"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 11,
+   "evidence": "30"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 10,
+  "tagged_messages": 0,
+  "final_output_turn_11": "questionnaire",
+  "questions_with_answer_line_turn_11": 7,
+  "markers_turn_11": {
+   "assumption:": 0,
+   "recommended:": 0,
+   "(added by me)": 0,
+   "not included — see note": 1,
+   "not done": 0,
+   "hard to reverse": 0
+  },
+  "assistant_turns": 12,
+  "first_final_output_turn": 11
+ }
+}

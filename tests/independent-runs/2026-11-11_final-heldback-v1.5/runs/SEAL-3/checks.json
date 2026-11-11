@@ -1,0 +1,54 @@
+{
+ "transcript": "C:/dev/dg-final-2026-11-11/runs/SEAL-3/SEAL-3_F.md",
+ "must": [
+  {
+   "check": "questionnaire-missing-parts",
+   "turn": 6,
+   "evidence": "anything else"
+  }
+ ],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 4,
+   "evidence": "Dates: the dates on which the arena could host our home games (my reading — confirm)"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 4,
+   "evidence": "7 sentences before the question"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 5,
+  "tagged_messages": 0,
+  "final_output_turn_6": "questionnaire",
+  "questions_with_answer_line_turn_6": 6,
+  "markers_turn_6": {
+   "assumption:": 0,
+   "recommended:": 0,
+   "(added by me)": 0,
+   "not included — see note": 0,
+   "not done": 0,
+   "hard to reverse": 0
+  },
+  "assistant_turns": 8,
+  "first_final_output_turn": 6
+ }
+}

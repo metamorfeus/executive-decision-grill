@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Set up free Claude Project instructions for a business decision map and questionnaire. Nothing to install. Simulated tests only; live check pending.">
+<title>Executive Decision Grill | Claude Project Quick Start</title>
+<link rel="canonical" href="https://metamorfeus.github.io/executive-decision-grill/docs/QUICK-START.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Executive Decision Grill">
+<meta property="og:title" content="Executive Decision Grill | Claude Project Quick Start">
+<meta property="og:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta property="og:url" content="https://metamorfeus.github.io/executive-decision-grill/docs/QUICK-START.html">
+<meta property="og:image" content="https://metamorfeus.github.io/executive-decision-grill/docs/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Executive Decision Grill: Claude questions your business decision before you commit. Claude recommends. You decide.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Executive Decision Grill | Claude Project Quick Start">
+<meta name="twitter:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta name="twitter:image" content="https://metamorfeus.github.io/executive-decision-grill/docs/social-preview.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238a2b24'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23ffffff'%3E%3F%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#fbfaf8; --panel:#ffffff; --ink:#1a1a1a; --ink-soft:#4a4a4a; --ink-faint:#6b6b6b;
+  --rule:#e2ded7; --rule-strong:#c9c3b8;
+  --accent:#8a2b24; --accent-soft:#f4eae8;
+  --new:#1f6f4a; --new-soft:#e8f3ed;
+  --code:#f2efe9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+    --rule:#33333b; --rule-strong:#4a4a54;
+    --accent:#e08a80; --accent-soft:#2e2020;
+    --new:#7fcda4; --new-soft:#1b2b23;
+    --code:#26262c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+  --rule:#33333b; --rule-strong:#4a4a54;
+  --accent:#e08a80; --accent-soft:#2e2020;
+  --new:#7fcda4; --new-soft:#1b2b23;
+  --code:#26262c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:36px 16px 56px}
+h1,h2{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.22;letter-spacing:-.01em}
+h1{font-size:1.8rem;margin:0 0 .15em}
+h2{font-size:1.02rem;margin:1.5em 0 .4em;padding-bottom:.25em;border-bottom:2px solid var(--rule-strong)}
+p{margin:.45em 0}
+.sub{color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.88rem;margin:0 0 1.2em}
+.lead{background:var(--panel);border:1px solid var(--rule-strong);border-top:4px solid var(--accent);border-radius:4px;padding:12px 16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+.box{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--new);border-radius:4px;padding:10px 14px}
+.box h3{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.95rem;margin:.1em 0 .35em}
+ol,ul{margin:.35em 0;padding-left:1.25em}
+li{margin:.2em 0}
+.say{font-style:italic;color:var(--ink-soft)}
+.phrase{display:inline-block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.82rem;background:var(--code);border-radius:3px;padding:.05em .4em;white-space:nowrap}
+table{border-collapse:collapse;width:100%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.84rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);border-bottom:2px solid var(--rule-strong)}
+a{color:var(--accent)}
+.caveat{font-size:.88rem;color:var(--ink-soft);margin-top:.5em}
+.foot{margin-top:1.6em;padding-top:.8em;border-top:1px solid var(--rule);font-size:.78rem;color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.home{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;margin:0 0 1em}
+@media print{
+  .home{display:none}
+  body{background:#fff;color:#000;font-size:10pt}
+  .wrap{max-width:none;padding:0}
+  .box,.lead,table{break-inside:avoid}
+  .grid{grid-template-columns:1fr 1fr}
+}
+.author{margin-top:2em;padding-top:1em;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.92rem;overflow-wrap:anywhere}
+.author h2{color:var(--ink);margin-top:0}
+.author a{color:var(--accent)}
+.author ul{padding-left:1.3em}
+.author li{margin:.35em 0}
+@media print{.author{color:#000;font-size:9pt;break-inside:avoid}.author h2,.author a{color:#000}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<p class="home"><a href="../index.html">← Executive Decision Grill home page, with the copy button</a></p>
+
+<h1>Executive Decision Grill — quick start</h1>
+<p class="sub">A printable guide to setting up the Claude Project instructions and starting your first decision interview.</p>
+
+<div class="lead">
+<p>Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install.</p>
+<p class="caveat"><b>Please note.</b> Version 1.5 has been tested only in simulated conversations, not yet in the real Claude app. Read every document Claude writes before you use or send it.</p>
+</div>
+
+<h2>Set it up once (5 minutes)</h2>
+<ol>
+<li>Open Claude (the desktop app or claude.ai; a computer is easier than a phone for the paste). Open <b>Projects</b>, click <b>+ New Project</b> and name it <i>Executive Decision Grill</i>.</li>
+<li>Go to <a href="https://metamorfeus.github.io/executive-decision-grill/">metamorfeus.github.io/executive-decision-grill</a> and click <b>Copy the instructions</b>. (It is the whole file <a href="../PASTE-INTO-CLAUDE.txt">PASTE-INTO-CLAUDE.txt</a>.)</li>
+<li>In the Project, choose <b>Set project instructions</b> (on some screens: <b>Instructions</b>), paste, and click <b>Save instructions</b>.</li>
+<li>Start a new chat <b>inside the Project</b> for each decision. If it worked, Claude restates your decision in one sentence and lists the smaller decisions inside it.</li>
+</ol>
+<p class="caveat">Anthropic's help pages say Projects are available on every plan, including Free (at most five Projects), and that you can set instructions for each Project. We have not tried it on a Free account, so check that the <b>Set project instructions</b> button appears.</p>
+
+<h2>The two modes</h2>
+<div class="grid">
+<div class="box">
+<h3>1 · Decision Grill</h3>
+<p class="say">"Grill me on whether we should move customer service to an outside provider."</p>
+<ul>
+<li>Claude lists the smaller decisions hiding inside yours. You add what is missing.</li>
+<li>It asks one question at a time, each with <b>My recommendation:</b>. "Agreed" is a full answer.</li>
+<li>It checks words that could mean two things, and offers three different options when you're stuck.</li>
+</ul>
+<p><b>You get:</b> a decision map. Decided · What we said no to · Parked with someone else · Open · Not yet clear · Terms we agreed · Assumptions · Next step.</p>
+</div>
+<div class="box">
+<h3>2 · Questionnaire</h3>
+<p class="say">"Write a questionnaire for our head of IT about the warehouse go-live."</p>
+<ul>
+<li>Claude asks only who it is for, what they know that you don't, and what you need back.</li>
+<li>It drafts neutral questions, one idea each, most important first.</li>
+<li>A sharing check flags names next to criticism, unannounced plans and personal data.</li>
+</ul>
+<p><b>You get:</b> a questionnaire ready to paste into an email or a document.</p>
+</div>
+</div>
+
+<h2>Useful phrases</h2>
+<table>
+<thead><tr><th>Say</th><th>What happens</th></tr></thead>
+<tbody>
+<tr><td><span class="phrase">Agreed</span></td><td>You accept Claude's recommended answer and move on.</td></tr>
+<tr><td><span class="phrase">wait, what?</span></td><td>Claude re-explains its last point in three short sentences, then asks again.</td></tr>
+<tr><td><span class="phrase">I don't know</span></td><td>The item is parked with the person who would know, or left open. Claude is built not to make up an answer.</td></tr>
+<tr><td><span class="phrase">let's wrap up</span></td><td>Straight to the decision map, with unfinished items listed.</td></tr>
+<tr><td><span class="phrase">skip the questions</span></td><td>Claude asks the two most important questions, then writes the output.</td></tr>
+</tbody>
+</table>
+
+<h2>Good habits</h2>
+<ul>
+<li><b>Give numbers, names and dates.</b> If you answer with a category or a feeling, Claude is built to ask again. That is the point.</li>
+<li><b>Big, hard-to-undo decisions stay yours.</b> If you say "whatever you think" on a multi-year contract, Claude is built to ask you to decide it yourself.</li>
+<li><b>Finish one decision in one chat.</b> A summary carried into a new chat loses detail.</li>
+<li><b>Questionnaires ask for knowledge, not judgements about colleagues.</b> Use roles instead of names when the document goes outside your team.</li>
+</ul>
+
+<h2>If something goes wrong</h2>
+<ul>
+<li><b>The paste looks cut short.</b> The text should start "You are my decision partner." and end "What should I change before you send it?" Paste again from a computer.</li>
+<li><b>Claude answers like an ordinary chat.</b> Start the chat from inside the Project.</li>
+<li><b>Claude asks two things at once, or drifts in a long chat.</b> Say "one question at a time, please" or "please follow the project instructions".</li>
+</ul>
+<p class="caveat">More help: <a href="FOR-EXECUTIVES.html#help">the guide for executives, section 6</a>.</p>
+
+<div class="foot">Executive Decision Grill v1.5 · <a href="https://metamorfeus.github.io/executive-decision-grill/">metamorfeus.github.io/executive-decision-grill</a> · github.com/metamorfeus/executive-decision-grill · Metamorfeus · MIT licence · Adapted from methods in Matt Pocock's skills (MIT licence). Independent; not affiliated with or endorsed by Matt Pocock or Anthropic.</div>
+<section class="author" aria-labelledby="about-author">
+<h2 id="about-author">About the author</h2>
+<p>Executive Decision Grill is made by Peter Velinov / Metamorfeus.</p>
+<ul>
+<li><a href="https://metamorfeus.com/">Metamorfeus</a> — Custom AI automation services for business processes.</li>
+<li><a href="https://metamorfeus.com/shop/">Metamorfeus products</a> — Paid offerings including AI audits, workforce automation and employee AI training.</li>
+<li><a href="https://claudecoworktraining.com/">Claude Cowork Training</a> — Independent, free self-paced training for everyday work, with paid team workshops; using Cowork requires a paid Claude plan.</li>
+<li><a href="https://assistant.metamorfeus.com/">Management Assistant</a> — Turns meeting audio or transcripts into draft minutes for review and keeps tasks, owners and due dates together.</li>
+</ul>
+<p>Some linked products and services are paid. Executive Decision Grill stays free and works without any of them. Independent; not affiliated with or endorsed by Matt Pocock or Anthropic.</p>
+</section>
+</main>
+</body>
+</html>

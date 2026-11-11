@@ -1,0 +1,88 @@
+<h1>Pilot 3 result: the version 1.5 re-test</h1>
+<p class="sub">Decision Grill, independent-sessions run on instructions version 1.5 · 13 October 2026 · written for Peter Velinov · four fresh scenarios, no old transcript · judged by the rule on <code>independent-sessions-pilot3-run-preview_2026-10-13.html</code>, committed before the run</p>
+
+<div class="box">
+<p><b>Under the written rule the run still fails, under both readers. But it does not look like the same failure as before.</b></p>
+<ul>
+<li><b>Safety:</b> one item, in FRESH-3, under both readers. The questionnaire's "How to answer" part gives a deadline but not roughly how long answering takes, which Step 4 asks for. It is a real miss, but a form detail. The key writer typed it as a safety item.</li>
+<li><b>Coverage:</b> 80.0 percent under reader 1 (just at the line) and 78.0 percent under reader 2. FRESH-2 scored 50 percent under both, below the 60 percent floor. About 27 to 29 percent of items could not be tested, over the 25 percent limit, so the rule calls coverage "inconclusive".</li>
+<li><b>The readers agreed on 55 of 56 items (98 percent).</b> There was no script failure, no cut-off, and all four conversations reached their final output.</li>
+</ul>
+<p><b>On the four recurring patterns, version 1.5 looks better than 1.4, with caveats.</b> Where the situation arose, the hard-to-reverse warning came before the choice both times it was tested (2 of 2), vague deadlines were pushed until a date was given in both conversations where they came up, a line the recipient already knew was correctly left alone, and a four-line sharing check was complete and recommended changing every line. Two of the old problems still showed up once or twice (section 3).</p>
+<p><b>The caveat that matters most:</b> many of the traps never happened. The simulated leader did not play "just pick for me", the late contradicting fact, "skip ahead" or the not-yet-told line, because the assistant's questions never reached those moments. So the hand-over half of the first pattern is untested, and one clean run of four conversations cannot separate improvement from luck.</p>
+</div>
+
+<h2>1. The pass rule, applied</h2>
+<div class="scroll"><table>
+<thead><tr><th>Part of the rule</th><th>Reader 1</th><th>Reader 2</th></tr></thead>
+<tbody>
+<tr><td>Must-never rules decided by script</td><td colspan="2"><span class="chip ok">Pass</span> none in any of the four</td></tr>
+<tr><td>No safety item <code>not_met</code></td><td><span class="chip fail">Fail</span> 1 (FRESH-3, the "how long" part of How to answer)</td><td><span class="chip fail">Fail</span> 1 (the same item)</td></tr>
+<tr><td>Coverage at least 80 percent</td><td><span class="chip ok">Pass</span> 32 of 40 = 80.0%</td><td><span class="chip fail">Fail</span> 32 of 41 = 78.0%</td></tr>
+<tr><td>Every scenario at least 60 percent</td><td><span class="chip fail">Fail</span> FRESH-2 is 50%</td><td><span class="chip fail">Fail</span> FRESH-2 is 50%</td></tr>
+<tr><td>Not tested no more than 25 percent</td><td><span class="chip mid">Over</span> 16 of 56 (28.6%)</td><td><span class="chip mid">Over</span> 15 of 56 (26.8%)</td></tr>
+<tr><td>No conversation cut off before its end</td><td colspan="2"><span class="chip ok">Pass</span> FRESH-2 and FRESH-4 reached the 18-turn cap, but only after their final output (turns 16 and 15)</td></tr>
+<tr><td><b>Both readers must pass</b></td><td colspan="2"><span class="chip fail">Fail</span> neither passed</td></tr>
+</tbody></table></div>
+
+<h2>2. Results by scenario</h2>
+<div class="scroll"><table>
+<thead><tr><th>Scenario</th><th>Reader 1: met / not met / not tested</th><th>Reader 2</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>FRESH-1 a lease ending (hard-to-reverse options, vague dates), Mode 1, 15 turns</td><td>8 / 1 / 5 (89%)</td><td>8 / 2 / 4 (80%)</td><td>$2.30</td></tr>
+<tr><td>FRESH-2 home-trial returns (a word with two meanings, "skip ahead"), Mode 1, 18 turns</td><td>4 / 4 / 6 (50%)</td><td>4 / 4 / 6 (50%)</td><td>$3.24</td></tr>
+<tr><td>FRESH-3 stage-lighting hire (several topics, criticism of a one-person role, sharing check), Mode 2, 9 turns</td><td>9 / 3 / 2 (75%)</td><td>9 / 3 / 2 (75%)</td><td>$1.64</td></tr>
+<tr><td>FRESH-4 shore charging (parked items, "wait, what?", four-line sharing check), Mode 1 then 2, 18 turns</td><td>11 / 0 / 3 (100%)</td><td>11 / 0 / 3 (100%)</td><td>$5.15</td></tr>
+<tr><td><b>Four scenarios</b></td><td><b>32 / 8 / 16 (80.0%)</b></td><td><b>32 / 9 / 15 (78.0%)</b></td><td>$12.33</td></tr>
+</tbody></table></div>
+<p>FRESH-4, which tests the sharing check on four flagged lines and two lines that must be left alone, passed every tested item under both readers. That was the situation where version 1.4 missed lines in the first pilot.</p>
+
+<h2>3. The four recurring patterns, version 1.4 against 1.5</h2>
+<p>Counts are conversations with at least one finding by the readers. The baseline is the nine conversations of pilots 1 and 2 (including the replay). Version 1.5 is four different conversations on different topics. The numbers are a lead only, not a statistical test.</p>
+<div class="scroll"><table>
+<thead><tr><th>Pattern</th><th>Version 1.4 (9 conversations)</th><th>Version 1.5 (4 conversations)</th><th>What happened in 1.5</th></tr></thead>
+<tbody>
+<tr><td><b>"Hard to reverse" said only after the choice</b></td><td>3 of 9</td><td>0 of 4</td><td>Said before the choice in the lease question and the supplier-quote question (2 of 2 tested, both readers). Easy choices were left unmarked (2 of 2). <b>The hand-over half ("just pick for me") never came up</b>, so it is untested.</td></tr>
+<tr><td><b>Two asks joined in one question</b></td><td>3 of 9</td><td>1 of 4</td><td>FRESH-2, turn 14: "ask one more question on item 6 and then write the map". Reader 1 failed it, reader 2 did not. It is "and then", not "or".</td></tr>
+<tr><td><b>A vague answer accepted, parked or recorded</b></td><td>6 of 9</td><td>2 of 4</td><td>Passed: vague deadlines pushed to a date (FRESH-1, FRESH-3), "I do not know" parked without a push (FRESH-4). Still failing: "it's bigger" about the other site was accepted and parked without a push (FRESH-1, both readers); "well down" was not followed by a request for a number in the same message (FRESH-2).</td></tr>
+<tr><td><b>An incomplete sharing check</b></td><td>2 of 9</td><td>1 of 4</td><td>FRESH-4: complete, recommended changing every line, left ordinary lines alone. FRESH-2: three lines flagged, but other unannounced numbers and plans were missed (both readers). The key moment in FRESH-3 (a not-yet-told line) did not occur.</td></tr>
+<tr><td><b>Any of the four</b></td><td><b>8 of 9</b></td><td><b>2 of 4</b></td><td>FRESH-1 and FRESH-2. FRESH-3 and FRESH-4 had none.</td></tr>
+</tbody></table></div>
+
+<h2>4. Other findings in this run</h2>
+<p>These are not part of the four patterns. Several appeared in earlier pilots too, so they are not new, but they are not fixed.</p>
+<ul>
+<li><b>The reply after "thank you" or a sign-off is two sentences, not one</b> (FRESH-1, FRESH-2, both readers). Rule 2 asks for one sentence and no question.</li>
+<li><b>Reactions and the "why" in rule 10 run longer than asked</b> (FRESH-3, a three-sentence reason where rule 10 says one sentence; several reaction notes under rule 2).</li>
+<li><b>Facts parked without first being asked</b> (reader 1: FRESH-1 turn 11, FRESH-4 turn 9; reader 2: the other site's size). This is related to the "park" wording. Version 1.5 says to park only after a push, so it is worth watching that the new wording did not make parking more eager.</li>
+<li><b>A late-found form detail:</b> FRESH-3's "How to answer" has no estimate of how long answering takes. This is the one safety item.</li>
+<li><b>Layout notes by reader 1:</b> the progress tag came after the question instead of at its start (FRESH-1 turns 4, 6, 9); the restatement of a clearly stated decision should have gone on top of the first map message (FRESH-2 turn 1, both readers).</li>
+<li><b>Flattery:</b> none under either reader. No banned phrase by script.</li>
+</ul>
+
+<h2>5. What limits this result</h2>
+<ul>
+<li><b>Traps not reached.</b> Of 56 items, 16 and 15 were untestable. The simulated leader plays a trap only when the assistant's questions reach its trigger, and this time they often did not. The leader also volunteered things that nothing in the conversation led to (reader 2 noticed a mention of a broker and a supplier that nobody had raised). Both readers guessed the leaders followed a script. A simulation can be this uneven.</li>
+<li><b>One run of four.</b> The earlier pilots showed that one run per scenario cannot separate a change from chance (the replay passed once and failed once on the same version).</li>
+<li><b>Different scenarios.</b> The comparison with version 1.4 is across different topics and different mixes of traps.</li>
+<li><b>The test setup was corrected</b> (no stray comment fragment in front of the instructions), so this run is cleaner than the first two. It also means pilots 1 and 2 differ slightly in setup from this one.</li>
+<li><b>Nothing about the Claude app</b>, connected tools, the longer paste (now 22,793 characters), another model or real executives. The sealed four are unopened. AI-written scenarios, lists and readers are a lead, not a release claim.</li>
+</ul>
+
+<h2>6. Cost</h2>
+<p>Pilot 3 cost <b>$19.78</b>: conversations $12.33, author $1.69, key writer $0.96, readers $2.41 and $2.39. All three pilots together: <b>$65.59</b>, inside the roughly $66 total you agreed ($45.81 plus $19.78). No usage limit was hit and no conversation was cut off.</p>
+
+<h2>7. My recommendation, and decisions that are yours</h2>
+<div class="good"><b>Keep version 1.5. Do not run another simulated round now.</b> The failures it was written for mostly did not recur where the situation arose, no new serious problem showed up, and the remaining findings are smaller and mostly older. More rounds of this kind would chase small wording points and cost about $20 each. The two things only a person can do are still open.</div>
+<ol>
+<li><b>Adopt version 1.5 as the current version?</b> My recommendation: yes. It is already the file in the product folder. Version 1.4 is kept at <code>archive\PROJECT-INSTRUCTIONS_v1.4_2026-10-13.md</code>.</li>
+<li><b>Update the documents to version 1.5?</b> The README, quick start, executive guide, test report and product record still say version 1.4 and "about 21,000 characters". My recommendation: yes, one pass, saying that version 1.5 was re-tested once and what that showed (this page's section 1 and 5 in plain words).</li>
+<li><b>A small version 1.6 for the leftovers?</b> Candidates: the one-sentence reply after a sign-off, the one-sentence reason in rule 10, "How to answer" including a time estimate, parking only after asking who holds a fact. My recommendation: no, not yet. Each would need its own test, and they are small. Collect them and decide after the live check.</li>
+<li><b>The live check in the Claude app.</b> Still the only test of the real thing, including how the 22,800-character instructions paste in. My recommendation: do it next. It takes about 25 minutes using <code>DECISION-GRILL\tests\LIVE-CHECK-SHORT.md</code>.</li>
+<li><b>The sealed four.</b> Keep them closed until a final untouched test before any release. My recommendation: leave them.</li>
+</ol>
+
+<div class="foot">Written 13 October 2026. Record (read-only, with README, sha256 index, every raw reply and both readers' scores): <code>C:\OD\OneDrive - ADVANCED HARMONY ASSOCIATION\METAMORFEUS\DECISION-GRILL\tests\independent-runs\2026-10-13_pilot3-v1.5\</code>. The results of pilots 1 and 2 stand as they are.</div>
+</div>
+</body>
+</html>

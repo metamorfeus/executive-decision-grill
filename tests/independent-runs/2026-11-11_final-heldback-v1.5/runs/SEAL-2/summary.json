@@ -1,0 +1,11 @@
+{
+ "test_id": "SEAL-2",
+ "label": "F",
+ "status": "aborted",
+ "assistant_turns": 18,
+ "executive_calls": 18,
+ "cost_usd_assistant": 5.3656,
+ "cost_usd_executive": 0.6875,
+ "cost_usd_total": 6.0531,
+ "transcript": "C:\\dev\\dg-final-2026-11-11\\runs\\SEAL-2\\SEAL-2_F.md"
+}

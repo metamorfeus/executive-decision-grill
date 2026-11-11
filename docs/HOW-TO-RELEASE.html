@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Decision Grill | Release and Maintenance Guide</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Executive Decision Grill">
+<meta property="og:title" content="Executive Decision Grill | Release and Maintenance Guide">
+<meta property="og:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta property="og:url" content="https://metamorfeus.github.io/executive-decision-grill/docs/HOW-TO-RELEASE.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Executive Decision Grill | Release and Maintenance Guide">
+<meta name="twitter:description" content="Free Claude Project instructions for CEOs, CFOs, COOs, directors and managers, built to question a business decision, produce a decision map and draft a questionnaire for whoever holds the missing answers—with nothing to install. Tested only in simulated conversations; the live Claude app check is pending.">
+<meta name="description" content="Maintain the free Claude Project instructions: verify the text, check files and plan publication. Prepared, not published; live check pending.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238a2b24'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23ffffff'%3E%3F%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#fbfaf8; --panel:#ffffff; --ink:#1a1a1a; --ink-soft:#4a4a4a; --ink-faint:#6b6b6b;
+  --rule:#e2ded7; --rule-strong:#c9c3b8;
+  --accent:#8a2b24; --accent-soft:#f4eae8;
+  --new:#1f6f4a; --new-soft:#e8f3ed;
+  --warn:#8a4b12; --warn-soft:#fbeee0;
+  --code:#f2efe9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+    --rule:#33333b; --rule-strong:#4a4a54;
+    --accent:#e08a80; --accent-soft:#2e2020;
+    --new:#7fcda4; --new-soft:#1b2b23;
+    --warn:#e0a469; --warn-soft:#2e2318;
+    --code:#26262c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16161a; --panel:#1e1e23; --ink:#eceae6; --ink-soft:#bab6ae; --ink-faint:#9a968e;
+  --rule:#33333b; --rule-strong:#4a4a54;
+  --accent:#e08a80; --accent-soft:#2e2020;
+  --new:#7fcda4; --new-soft:#1b2b23;
+  --warn:#e0a469; --warn-soft:#2e2318;
+  --code:#26262c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.6 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:36px 16px 64px}
+h1,h2,h3{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.22;letter-spacing:-.01em}
+h1{font-size:1.75rem;margin:0 0 .15em}
+h2{font-size:1.12rem;margin:2em 0 .5em;padding-bottom:.25em;border-bottom:2px solid var(--rule-strong)}
+h3{font-size:.98rem;margin:1.3em 0 .3em}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.sub{color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.88rem;margin:0 0 1.2em}
+.lead{background:var(--panel);border:1px solid var(--rule-strong);border-top:4px solid var(--accent);border-radius:4px;padding:12px 16px}
+.callout{background:var(--warn-soft);border:1px solid var(--warn);border-radius:4px;padding:10px 14px;margin:1em 0}
+.callout b{color:var(--warn)}
+.toc{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.9rem;background:var(--code);border-radius:4px;padding:10px 16px;margin:1.2em 0}
+.toc ol{margin:.3em 0;padding-left:1.3em}
+ol,ul{padding-left:1.3em}
+li{margin:.3em 0}
+code,pre{font-family:Consolas,"SF Mono",Menlo,monospace;font-size:.84em;background:var(--code);border-radius:3px}
+code{padding:.05em .3em;overflow-wrap:anywhere}
+pre{padding:10px 12px;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+table{border-collapse:collapse;width:100%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.86rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);border-bottom:2px solid var(--rule-strong)}
+.scroll{overflow-x:auto}
+.foot{margin-top:2em;padding-top:.8em;border-top:1px solid var(--rule);font-size:.8rem;color:var(--ink-faint);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.home{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;margin:0 0 1em}
+@media print{
+  .home,.toc{display:none}
+  body{background:#fff;color:#000;font-size:10pt}
+  .wrap{max-width:none;padding:0}
+  table,pre,.lead,.callout{break-inside:avoid}
+  h2,h3{break-after:avoid}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+<p class="home"><a href="../index.html">← Executive Decision Grill home page, with the copy button</a></p>
+
+<h1>Executive Decision Grill — how to release and maintain it</h1>
+<p class="sub">For the maintainer · written 10 November 2026 · instructions v1.5 · repository <code>metamorfeus/executive-decision-grill</code> · status at writing: prepared, not published</p>
+<p>A maintainer guide to checking the free Claude Project instructions, preparing a new version and publishing only with Peter’s explicit approval.</p>
+
+<div class="lead">
+<p><b>Who this is for.</b> Whoever looks after the product: checking that the published text is the tested one, releasing a new version, publishing, and taking it down again. You need Git Bash, Python 3 and the GitHub command-line tool <code>gh</code>, signed in as <code>metamorfeus</code>. Executives do not need this page.</p>
+<p><b>Three habits keep it safe.</b> Stage files by name, because the product folder holds a private <code>archive/</code>. Change the text you paste only together with a new version number and a changelog entry. And do not open the sealed test scenarios, which are kept for one final, untouched test.</p>
+</div>
+
+<nav class="toc"><b>Contents</b>
+<ol>
+<li><a href="#together">The files that must agree</a></li>
+<li><a href="#fingerprint">Check the fingerprint</a></li>
+<li><a href="#release">Release a new version</a></li>
+<li><a href="#publish">Publish for the first time</a></li>
+<li><a href="#undo">Undo a publication</a></li>
+<li><a href="#feedback">Look after feedback</a></li>
+</ol></nav>
+
+<h2 id="together">1. The files that must agree</h2>
+<p>The product is one text. Several files repeat it or describe it, and they must say the same thing.</p>
+<div class="scroll"><table>
+<thead><tr><th>File</th><th>What it must match</th></tr></thead>
+<tbody>
+<tr><td><code>PROJECT-INSTRUCTIONS.md</code></td><td>The source. Its first line holds the version. The text you paste starts at the line "You are my decision partner. I am a senior leader" just below the comment, and runs to the end of the file.</td></tr>
+<tr><td><code>PASTE-INTO-CLAUDE.txt</code></td><td>Byte for byte the same as that text. The home page copy button reads this file.</td></tr>
+<tr><td><code>CHANGELOG.md</code></td><td>The top entry for each version gives the date, the changes, the character count and the SHA-256 fingerprint of the text you paste.</td></tr>
+<tr><td><code>.gitattributes</code></td><td>Marks both files above, and <code>tests/independent-runs/</code>, as <code>-text</code>. Git on Windows would otherwise change their line endings and break the fingerprints.</td></tr>
+<tr><td>Pages that name the version</td><td><code>README.md</code> ("Current version"), the footers of <code>index.html</code> and the guides, <code>docs/WHAT-WAS-BUILT.html</code>, <code>tests/TEST-REPORT.html</code> and <code>RELEASE-CHECKLIST.html</code>.</td></tr>
+</tbody></table></div>
+<p>For version 1.5 the text you paste is 22,793 characters, SHA-256 <code>9a987f08eb138da683199d8cb2c5e831a800340bd91647e52db8201f141bc036</code>.</p>
+
+<h2 id="fingerprint">2. Check the fingerprint</h2>
+<p>Run this before and after any batch of edits, and before every commit. Both lines must show the same fingerprint, and it must match the top entry in <code>CHANGELOG.md</code>.</p>
+<pre>cd "/c/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL"
+python - &lt;&lt;'EOF'
+import hashlib
+b = open("PROJECT-INSTRUCTIONS.md", "rb").read()
+i = b.find(b"\nYou are my decision partner. I am a senior leader") + 1
+print("body ", hashlib.sha256(b[i:]).hexdigest(), len(b[i:].decode("utf-8")))
+print("paste", hashlib.sha256(open("PASTE-INTO-CLAUDE.txt", "rb").read()).hexdigest())
+EOF</pre>
+<p>After publishing, check what GitHub actually serves:</p>
+<pre>curl -s https://raw.githubusercontent.com/metamorfeus/executive-decision-grill/main/PASTE-INTO-CLAUDE.txt | sha256sum
+curl -s https://metamorfeus.github.io/executive-decision-grill/PASTE-INTO-CLAUDE.txt | sha256sum</pre>
+
+<h2 id="release">3. Release a new version</h2>
+<p>Use these steps for any change to the text you paste, even a single word. Changes that touch only the guides need steps 1, 7, 8 and 9.</p>
+<ol>
+<li><b>Back up.</b> Copy every file you will change into <code>archive/before-v&lt;N.M&gt;_&lt;date&gt;/</code>, keeping the folder layout. <code>archive/</code> is never published.</li>
+<li><b>Edit the instructions.</b> Change <code>PROJECT-INSTRUCTIONS.md</code> below its comment, and the version in its first line. Keep the file's line endings as LF.</li>
+<li><b>Regenerate the paste file.</b> This copies the text you paste into <code>PASTE-INTO-CLAUDE.txt</code> and prints the new count and fingerprint:
+<pre>python - &lt;&lt;'EOF'
+import hashlib
+b = open("PROJECT-INSTRUCTIONS.md", "rb").read()
+i = b.find(b"\nYou are my decision partner. I am a senior leader") + 1
+body = b[i:]
+assert i &gt; 0, "start line not found"
+assert b"\r\n" not in body, "line endings must be LF"
+assert not body.startswith(b"\xef\xbb\xbf"), "no byte-order mark"
+open("PASTE-INTO-CLAUDE.txt", "wb").write(body)
+print(len(body.decode("utf-8")), "characters, SHA-256", hashlib.sha256(body).hexdigest())
+EOF</pre>
+If you change the first sentence of the instructions, also change the line the copy button checks for (<code>FIRST</code> in the script of <code>index.html</code>) and the start line in the scripts on this page.</li>
+<li><b>Test what changed.</b> Re-run at least the tests that touch the changed rule, and the live check in the Claude app (<code>tests/LIVE-CHECK-SHORT.md</code>). Record the result, good or bad, in <code>tests/TEST-REPORT.html</code>. Run every test or script that could loop or use a lot of memory through the memory cap (<code>python C:\Scripts\capped_run.py -- &lt;command&gt;</code>).</li>
+<li><b>Write the changelog entry.</b> Add it at the top of <code>CHANGELOG.md</code>: the version, the date, each change with the finding that caused it, the new character count and the full fingerprint.</li>
+<li><b>Update the pages.</b> Find every place that still names the old version, count or fingerprint, and update it:
+<pre>grep -rn -E "v?1\.5|22,793|9a987f08|about 23,000" --include=*.md --include=*.html . | grep -v "^./archive/"</pre>
+Keep the honest limits up to date in the README, the home page and the guide for executives: what was tested, on which version, and what was not.</li>
+<li><b>Check the published file set</b> in a throwaway copy, never in the product folder itself:
+<pre>T="$(mktemp -d)/trial"
+mkdir -p "$T" &amp;&amp; tar --exclude=./archive -cf - . | (cd "$T" &amp;&amp; tar -xf -)
+cd "$T" &amp;&amp; git init -q &amp;&amp; git add -A
+git ls-files | grep -i -E '^archive/|live-check/|sealed'      # must print nothing
+git grep -l -E 'SEAL-[0-9]'                                    # PUBLIC-COPY-NOTE.md, TEST-REPORT.html and the final run's record only
+git cat-file -p :PASTE-INTO-CLAUDE.txt | sha256sum             # the new fingerprint
+git ls-files | wc -l                                           # note the count in RELEASE-CHECKLIST.html</pre></li>
+<li><b>Commit and publish.</b> In the product folder, stage the changed files by name, commit with a message that names the version, and push. Then tag the version and, if you want a fixed download, make a GitHub release whose notes are the changelog entry:
+<pre>git add PROJECT-INSTRUCTIONS.md PASTE-INTO-CLAUDE.txt CHANGELOG.md README.md index.html docs tests
+git commit -m "v1.6: &lt;one line on what changed&gt;"
+git push
+git tag v1.6 &amp;&amp; git push origin v1.6
+gh release create v1.6 --title "Executive Decision Grill v1.6" --notes-file notes.md   # optional</pre></li>
+<li><b>Check the live site.</b> Wait until <code>gh api repos/metamorfeus/executive-decision-grill/pages --jq .status</code> says <code>built</code>. Run the two checks in section 2. Open the home page, click <b>Copy the instructions</b> in Chrome and in Safari or on an iPhone, paste into a text editor, and check the first and last lines. Open each guide from the home page.</li>
+</ol>
+
+<h2 id="publish">4. Publish for the first time</h2>
+<p>The exact commands for the first publication are in <a href="../RELEASE-CHECKLIST.html">RELEASE-CHECKLIST.html</a>, section 4, together with the risks the owner accepts before publishing. In short:</p>
+<ol>
+<li>Create the local repository, stage the named files and folders, and check the file set as in step 7 above.</li>
+<li>Create the public repository with its About line, and push.</li>
+<li>Add the topics and the home page address, and switch on GitHub Pages from the root of <code>main</code>.</li>
+<li>Create the <code>feedback</code> label that the feedback form uses: <code>gh label create feedback --description "From the feedback form" --color C5DEF5</code>.</li>
+<li>Upload <code>docs/social-preview.png</code> by hand under <b>Settings → General → Social preview</b>. GitHub offers no command for this.</li>
+<li>Run the checks in section 2 and step 9, then mark the release checklist as published, with the date and the first commit.</li>
+</ol>
+
+<h2 id="undo">5. Undo a publication</h2>
+<p>Pick the smallest step that solves the problem. Copies that others or search engines made while the repository was public cannot be recalled.</p>
+<div class="scroll"><table>
+<thead><tr><th>You want to</th><th>Do this</th></tr></thead>
+<tbody>
+<tr><td>Withdraw a bad version, keep the project</td><td>Revert the commit and push: <code>git revert &lt;commit&gt;</code>, then <code>git push</code>. Add a changelog entry that says why. If you made a GitHub release, delete it with <code>gh release delete v1.6 --yes</code>.</td></tr>
+<tr><td>Take the home page down, keep the repository</td><td><code>gh api -X DELETE repos/metamorfeus/executive-decision-grill/pages</code></td></tr>
+<tr><td>Hide the whole project for now</td><td><code>gh repo edit metamorfeus/executive-decision-grill --visibility private --accept-visibility-change-consequences</code>. This also takes the Pages site down on a free account.</td></tr>
+<tr><td>Delete it for good</td><td>Give <code>gh</code> the right first: <code>gh auth refresh -h github.com -s delete_repo</code>. Then <code>gh repo delete metamorfeus/executive-decision-grill --yes</code>. In the product folder, <code>rm -rf .git</code> removes only the git history; the files stay.</td></tr>
+</tbody></table></div>
+<div class="callout"><b>Before you delete anything,</b> look at what you are about to remove, and keep the product folder as it is. It holds the only copy of the sealed scenarios, in <code>archive/</code>.</div>
+
+<h2 id="feedback">6. Look after feedback</h2>
+<ul>
+<li>Feedback arrives as GitHub issues through the form in <code>.github/ISSUE_TEMPLATE/feedback.yml</code>. The form warns people that what they write is public and asks them to remove names and confidential material.</li>
+<li>If an issue still holds something confidential, act at once. Edit the text out (the edit history stays visible to people who open it), or delete the issue: <code>gh issue delete &lt;number&gt; --yes</code>. Tell the person why, in a new comment or by other means.</li>
+<li>When feedback shows a real problem in Claude's behaviour, treat it like a test finding. Note it in <code>tests/TEST-REPORT.html</code> as a weak spot, and fix it only through a new version (section 3).</li>
+<li>Do not quote feedback as praise on the pages. The pages carry no testimonials or user counts.</li>
+</ul>
+
+<div class="foot">Executive Decision Grill · how to release it · v1.5 · written 2026-11-10 · MIT licence · © 2026 Peter Velinov / Metamorfeus</div>
+</main>
+</body>
+</html>

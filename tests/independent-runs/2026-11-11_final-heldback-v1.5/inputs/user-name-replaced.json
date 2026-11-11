@@ -1,0 +1,14 @@
+{
+ "build_record.py": {
+  "before": "129cb2ad3adc3f895a28fc23853edecbb4dd772a51e29cd8687708dc035ac76e",
+  "after": "1b94f6f076606c3f26460c23063b98a3c3d7a0b491c53a2625bcd44403256e6e"
+ },
+ "run_conversation.py": {
+  "before": "2ff910b42d7923e8ec32eef43af28e6ea9f1f86d7cafa20d0622ef243c1e2860",
+  "after": "7783c498143504d59a733e9ae8feafc0857f3196b1196fab9326321268a08b83"
+ },
+ "run_readers.sh": {
+  "before": "4ea36701bf6b9ab0db2aa79e6eae318967003faebf98fe53cc463955de44da09",
+  "after": "0365d0886380727862c0e0f8d22b30390a63002977fb1e11465e43c73ce76bb7"
+ }
+}

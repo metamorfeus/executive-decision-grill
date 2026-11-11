@@ -1,0 +1,2 @@
+{"test_id": "SEAL-1", "label": "F", "status": "turn-cap", "assistant_turns": 18, "executive_calls": 18, "cost_usd_assistant": 3.7113, "cost_usd_executive": 0.6395, "cost_usd_total": 4.3508, "transcript": "C:\\dev\\dg-final-2026-11-11\\runs\\SEAL-1\\SEAL-1_F.md"}
+[capped_run] exit=0 peak_job_mb=537 reason=finished

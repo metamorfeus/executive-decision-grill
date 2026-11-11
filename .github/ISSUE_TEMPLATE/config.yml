@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Set-up help and "If something goes wrong"
+    url: https://metamorfeus.github.io/executive-decision-grill/docs/FOR-EXECUTIVES.html#help
+    about: Most set-up problems are answered on this page. Read it first if Claude refuses the paste or does not follow the instructions.

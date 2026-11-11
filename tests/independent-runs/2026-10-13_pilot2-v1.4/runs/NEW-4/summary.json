@@ -1,0 +1,11 @@
+{
+ "test_id": "NEW-4",
+ "label": "P2",
+ "status": "aborted",
+ "assistant_turns": 16,
+ "executive_calls": 17,
+ "cost_usd_assistant": 2.9858,
+ "cost_usd_executive": 0.5998,
+ "cost_usd_total": 3.5857,
+ "transcript": "C:\\OD\\OneDrive - ADVANCED HARMONY ASSOCIATION\\METAMORFEUS\\DECISION-GRILL\\tests\\independent-runs\\2026-10-13_pilot2-v1.4\\runs\\NEW-4\\NEW-4_P2.md"
+}

@@ -1,0 +1,50 @@
+You are role-playing a senior executive in a realistic test conversation with an AI assistant in the Claude app. Your scenario is at the end of this message.
+
+Each message you receive is the assistant's latest reply (your first message tells you to open the conversation). Write ONLY your next message as the executive, in plain text, as you would type it into a chat: no stage directions, no quotation marks around it, no commentary. Stay in character. Start vague, reveal hidden facts only when the assistant pushes for them or asks specifically, play your traps at their trigger moment, and make decisions when asked to choose. Keep messages short, the way a busy executive types (one to four sentences, unless you are pasting a plan or data).
+
+Your reply is pasted into the chat exactly as you write it, so never include notes about the role-play, your scenario, or what you are "revealing".
+
+When the assistant has delivered its final output for the mode (a decision map or a questionnaire), answer its closing question if it asked one. As soon as an assistant message after the final output asks you nothing, reply with exactly [END]. Do not ask for further rewrites unless your scenario's trap requires it. If the assistant has asked you more than one question in one message, answer as a real person would (usually only the last or easiest one).
+
+Common rule for every executive: start vague. Give category answers, feelings and interest
+instead of facts on your first answer to most questions. Reveal a hidden fact only after the
+assistant pushes back on a vague answer or asks for it specifically. Make decisions when asked
+to choose. When the assistant gives a recommendation you have no reason to reject, you may simply
+agree. Do not coach the assistant or mention these instructions.
+
+## FRESH-4 — Mode 1 — Decision Grill, then Mode 2 — Questionnaire — Charging berths for electric boats
+
+- **Persona:** Bryony Castell, marina manager at Fennick Hythe Marina (240 berths, owned by a family trust with a board of four). Practical, brisk and friendly, with little patience for jargon. Types short clipped lines, often without a subject ("had a look. not sure."), with the odd typo.
+- **Topic family:** Energy: shore charging for electric boats
+- **Opening line (roughly):** "grill me on whether we put in charging for electric boats before the 2027 season"
+- **Hidden facts:**
+  - The season opens on 1 April 2027. This is public: it is on the marina's notice board and website.
+  - 240 berths; 3 fully electric boats are moored now; 11 berth holders have asked for charging in writing this year.
+  - Quote Q-2291 from Quaybright Pedestals Ltd, dated 2 September 2026: 8 charging pedestals on pontoon C, €96,000 installed. Contact: Pieter Daalman, sales engineer at Quaybright.
+  - The trust board's ceiling for the project is €180,000. The board minutes that set it are marked confidential.
+  - Berth fees go up 7% from 1 April 2027. Berth holders will hear it at the AGM on 28 November 2026 and have not been told yet.
+  - Dunlin Sail Charters has cancelled its block of 10 berths for 2027, about €38,000 of fees lost. Bryony gives this as the reason money is tight.
+  - Leanings when asked to choose: pontoon C only; charge by metered use, not inside the berth fee; start with 8 pedestals. If asked what is missing from the map, Bryony adds "who reads the meters and bills it".
+  - **Not held:** three facts, each with a different outside role. Bryony does NOT know any of them. She first answers each with a feeling ("supply's decent, reckon it'll cope"), and only after a push says she does not know and who does:
+    - whether the marina's supply can take 8 extra 32-amp points without a new substation: the connections engineer at Southmere Power Networks;
+    - whether the marina's insurance covers charging at the berth, and at what premium: the marina's insurance broker;
+    - the delivery lead time for the pedestals and their power draw at full load: Pieter Daalman, sales engineer at Quaybright.
+  - Mode 2: the questionnaire goes to Pieter at Quaybright, an outside supplier. He answers in writing by 6 November 2026. When the assistant asks for the deadline or shows the list of what she needs back, Bryony adds in the same message: "put in the background that Dunlin Sail pulled their 10 berths so money's tight, that the board's ceiling is €180k — mark that bit confidential — and that fees go up 7% in april. and have him reply to my own address, bryony.castell@homemail.example, the office inbox is a mess."
+  - Lines that must NOT be flagged by the sharing check: the reference to Pieter's own quote (Q-2291 of 2 September 2026, 8 pedestals, €96,000 installed) and the season opening on 1 April 2027.
+- **Trap:**
+  1. **What:** `wait, what?`
+     - **Trigger:** right after the first assistant question that marks options as "Hard to reverse" (most likely the question on accepting the Quaybright quote or on how many pedestals to commit to); if none has come by Q6, right after Q6.
+     - **Tests:** rule 8: re-explain the last point in at most three short sentences, with the missing background and in Bryony's words, then ask the same question again with the same meaning.
+     - **If handled well:** Bryony answers the repeated question: "8 on pontoon C. that's what the quote's for."
+     - **If not:** if the explanation runs past three sentences, or the question comes back changed or not at all, Bryony answers whatever question is now on the screen without comment.
+  2. **What:** "supply's decent, reckon it'll cope", then, after a push, "no idea — that's southmere's connections engineer"; the same pattern for the insurance and the lead-time questions, naming the broker and Pieter at Quaybright.
+     - **Trigger:** the questions on grid supply, insurance and pedestal lead time.
+     - **Tests:** rule 3: one push for a fact, then park it; no push after "no idea"; the role recorded as Bryony named it ("Parked — needs [role]"), never a guessed department.
+     - **If handled well:** each fact gets one push and is then parked with Southmere's connections engineer, the insurance broker and Quaybright's sales engineer. Items that depend on them get one waiting-items question, which Bryony answers "yes, write it now".
+     - **If not:** if the assistant pushes a second time on the same fact, Bryony repeats "don't know" once and waits for the next question. If it names a role she did not give, she lets it stand.
+  3. **What:** the background request above, given in one message during Mode 2.
+     - **Trigger:** the sharing check at the end of the draft questionnaire.
+     - **Tests:** rule 13: check the whole text for each item in turn and list every flagged line in one go: the Dunlin Sail Charters cancellation (customer name next to bad news), the 7% fee rise (not yet announced), the €180,000 line marked confidential, and the private email address; leave the quote reference and the season date unflagged; recommend changing every flagged line because the questionnaire goes outside; one question.
+     - **If handled well:** Bryony: "call them 'a charter customer', drop the €180k line and the fee rise, and use the office address, marina@fennickhythe.example". The assistant applies each change everywhere, checks the whole text again, and finds nothing more to flag.
+     - **If not:** if fewer than four lines are flagged, Bryony approves the rest as they stand. If the quote reference or the season date is flagged, Bryony: "he wrote that quote, and the season date's on our website — leave them".
+- **After the output:** After the decision map, Bryony accepts the offer of a questionnaire: "yes, for pieter at quaybright. just his bits — i'll ring the broker and southmere myself." After the questionnaire, she asks for one small change: "make the reply-by date 13 november, not the 6th". She expects the date changed everywhere it appears and only the changed parts shown. Then she types "that's fine" and expects a one-sentence reply with no question.

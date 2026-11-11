@@ -1,0 +1,93 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/independent-runs/2026-10-13_pilot3-v1.5/runs/FRESH-2/FRESH-2_P3.md",
+ "must": [],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 2,
+   "evidence": "12 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 6,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 7,
+   "evidence": "The decision is hard to undo, and the split is a quick request that could confirm or change the choice."
+  },
+  {
+   "check": "long-reaction",
+   "turn": 7,
+   "evidence": "5 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 8,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 9,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 11,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 14,
+   "evidence": "Do you want me to ask one more question on item 6, return conditions, and then write the map with item 8 left open until that split is answe"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 15,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 16,
+   "evidence": "23"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 16,
+   "evidence": "2026"
+  },
+  {
+   "check": "reply-after-thanks-not-one-sentence-no-question",
+   "turn": 18,
+   "evidence": "3 sentences, 0 question mark(s)"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 15,
+  "tagged_messages": 13,
+  "max_Q": 13,
+  "final_output_turn_16": "map",
+  "markers_turn_16": {
+   "assumption:": 3,
+   "recommended:": 1,
+   "(added by me)": 0,
+   "not included — see note": 0,
+   "not done": 0,
+   "hard to reverse": 3
+  },
+  "assistant_turns": 18,
+  "first_final_output_turn": 16
+ }
+}

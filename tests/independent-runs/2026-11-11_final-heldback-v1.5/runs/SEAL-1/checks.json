@@ -1,0 +1,98 @@
+{
+ "transcript": "C:/dev/dg-final-2026-11-11/runs/SEAL-1/SEAL-1_F.md",
+ "must": [],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 1,
+   "evidence": "13 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 2,
+   "evidence": "17 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 5,
+   "evidence": "Besides pottery, upholstery and first aid, which other evening courses would you keep in person?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 5,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 5,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 7,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 9,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 17,
+   "evidence": "10"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 17,
+   "evidence": "2026"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 17,
+   "evidence": "25"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 17,
+   "evidence": "11"
+  },
+  {
+   "check": "quote-not-word-for-word",
+   "turn": 17,
+   "evidence": " to my recommendation: "
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 16,
+  "tagged_messages": 14,
+  "max_Q": 14,
+  "final_output_turn_17": "map",
+  "markers_turn_17": {
+   "assumption:": 4,
+   "recommended:": 1,
+   "(added by me)": 0,
+   "not included — see note": 1,
+   "not done": 0,
+   "hard to reverse": 6
+  },
+  "assistant_turns": 18,
+  "first_final_output_turn": 17
+ }
+}

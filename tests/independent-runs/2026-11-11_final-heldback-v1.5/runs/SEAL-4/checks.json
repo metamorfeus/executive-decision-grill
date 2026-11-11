@@ -1,0 +1,79 @@
+{
+ "transcript": "C:/dev/dg-final-2026-11-11/runs/SEAL-4/SEAL-4_F.md",
+ "must": [
+  {
+   "check": "questionnaire-missing-parts",
+   "turn": 8,
+   "evidence": "questions"
+  }
+ ],
+ "suspects": [
+  {
+   "check": "possible-second-ask",
+   "turn": 1,
+   "evidence": "They don't yet tell me what you need from him."
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 5,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 5,
+   "evidence": "8 sentences before the question"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 6,
+   "evidence": "The latest date he can confirm the rota."
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 6,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 6,
+   "evidence": "10 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 7,
+   "evidence": "reader decides: decision question or fact question?"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 7,
+  "tagged_messages": 0,
+  "final_output_turn_8": "questionnaire",
+  "questions_with_answer_line_turn_8": 6,
+  "markers_turn_8": {
+   "assumption:": 0,
+   "recommended:": 0,
+   "(added by me)": 0,
+   "not included — see note": 0,
+   "not done": 0,
+   "hard to reverse": 0
+  },
+  "assistant_turns": 11,
+  "first_final_output_turn": 8
+ }
+}

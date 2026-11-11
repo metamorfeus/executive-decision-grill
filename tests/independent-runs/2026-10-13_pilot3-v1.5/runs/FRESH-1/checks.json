@@ -1,0 +1,93 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/independent-runs/2026-10-13_pilot3-v1.5/runs/FRESH-1/FRESH-1_P3.md",
+ "must": [],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 1,
+   "evidence": "10 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 2,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 4,
+   "evidence": "How many members would you expect to lose if Brindlemoor closed, as a number?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 4,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 5,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 6,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 8,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 9,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 11,
+   "evidence": "Parked — who knows: to confirm — Tannery Row's rent, size and lease terms, which item 3 now waits for."
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 13,
+   "evidence": "Do you want me to write the map now, with items 3 and 7 left open until Tannery Row's rent, size and lease terms are answered?"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 14,
+   "evidence": "20"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 14,
+   "evidence": "1.18m"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 13,
+  "tagged_messages": 12,
+  "max_Q": 12,
+  "final_output_turn_14": "map",
+  "markers_turn_14": {
+   "assumption:": 2,
+   "recommended:": 1,
+   "(added by me)": 0,
+   "not included — see note": 0,
+   "not done": 0,
+   "hard to reverse": 1
+  },
+  "assistant_turns": 15,
+  "first_final_output_turn": 14
+ }
+}

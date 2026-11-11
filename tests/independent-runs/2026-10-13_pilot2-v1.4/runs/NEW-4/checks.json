@@ -1,0 +1,103 @@
+{
+ "transcript": "C:/OD/OneDrive - ADVANCED HARMONY ASSOCIATION/METAMORFEUS/DECISION-GRILL/tests/independent-runs/2026-10-13_pilot2-v1.4/runs/NEW-4/NEW-4_P2.md",
+ "must": [],
+ "suspects": [
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 1,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 1,
+   "evidence": "12 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 2,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 2,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 3,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 3,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 4,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 6,
+   "evidence": "Once you confirm the order on 20 November, can you still cancel it or cut the quantity?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 6,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 6,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "long-reaction",
+   "turn": 7,
+   "evidence": "4 sentences before the question"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 8,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "possible-second-ask",
+   "turn": 10,
+   "evidence": "When do you give the garden centres the peat-free promise: before or after you confirm the Corrimont order on 20 November?"
+  },
+  {
+   "check": "question-without-recommendation-line",
+   "turn": 11,
+   "evidence": "reader decides: decision question or fact question?"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 13,
+   "evidence": "50"
+  },
+  {
+   "check": "number-not-in-user-messages",
+   "turn": 13,
+   "evidence": "2026"
+  }
+ ],
+ "counts": {
+  "question_mark_not_one": 0,
+  "gathering_messages": 12,
+  "tagged_messages": 11,
+  "max_Q": 11,
+  "final_output_turn_13": "map",
+  "markers_turn_13": {
+   "assumption:": 3,
+   "recommended:": 1,
+   "(added by me)": 0,
+   "not included — see note": 0,
+   "not done": 0,
+   "hard to reverse": 2
+  },
+  "assistant_turns": 16,
+  "first_final_output_turn": 13
+ }
+}

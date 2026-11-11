@@ -1,0 +1,57 @@
+name: Something went wrong, or felt annoying
+description: Tell us where Executive Decision Grill did not behave as described. Plain words are fine.
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. Everything you write here is **public**. Anyone on the internet can read it, and search engines may copy it.
+
+        **Before you paste any part of a chat, remove:** names of people, customers and suppliers; figures that are not public; plans that have not been announced; anything your organisation's AI policy or confidentiality rules would not allow you to publish. Replace them with roles or placeholders, such as "the head of IT" or "[amount]".
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which mode were you using?
+      options:
+        - "1 · Decision Grill (Claude questioned me about a decision)"
+        - "2 · Questionnaire (Claude drafted questions for someone else)"
+        - "Setting it up (copying or pasting the instructions)"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: For example, "Claude asked two questions at once" or "the paste was cut short".
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: false
+  - type: textarea
+    id: excerpt
+    attributes:
+      label: The part of the chat that went wrong (optional, cleaned)
+      description: Paste only the few messages that show the problem, after removing anything confidential. Leave this empty if you are unsure.
+      render: text
+    validations:
+      required: false
+  - type: input
+    id: setup
+    attributes:
+      label: Where did you use it? (optional)
+      description: For example, "claude.ai in Chrome, Pro plan" or "Claude app on iPhone, Free plan".
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I have removed names, confidential figures and unannounced plans from what I pasted.
+          required: true

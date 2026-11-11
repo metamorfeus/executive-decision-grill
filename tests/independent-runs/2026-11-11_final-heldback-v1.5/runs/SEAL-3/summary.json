@@ -1,0 +1,11 @@
+{
+ "test_id": "SEAL-3",
+ "label": "F",
+ "status": "complete",
+ "assistant_turns": 8,
+ "executive_calls": 9,
+ "cost_usd_assistant": 0.5459,
+ "cost_usd_executive": 0.1941,
+ "cost_usd_total": 0.7401,
+ "transcript": "C:\\dev\\dg-final-2026-11-11\\runs\\SEAL-3\\SEAL-3_F.md"
+}

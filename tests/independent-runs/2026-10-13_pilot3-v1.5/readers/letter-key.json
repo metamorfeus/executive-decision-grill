@@ -1,0 +1,14 @@
+{
+ "reader1": {
+  "A": "FRESH-3",
+  "B": "FRESH-4",
+  "C": "FRESH-1",
+  "D": "FRESH-2"
+ },
+ "reader2": {
+  "A": "FRESH-4",
+  "B": "FRESH-1",
+  "C": "FRESH-3",
+  "D": "FRESH-2"
+ }
+}

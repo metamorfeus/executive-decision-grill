@@ -1,0 +1,11 @@
+{
+ "test_id": "FRESH-4",
+ "label": "P3",
+ "status": "turn-cap",
+ "assistant_turns": 18,
+ "executive_calls": 18,
+ "cost_usd_assistant": 4.5434,
+ "cost_usd_executive": 0.6061,
+ "cost_usd_total": 5.1494,
+ "transcript": "C:\\OD\\OneDrive - ADVANCED HARMONY ASSOCIATION\\METAMORFEUS\\DECISION-GRILL\\tests\\independent-runs\\2026-10-13_pilot3-v1.5\\runs\\FRESH-4\\FRESH-4_P3.md"
+}
